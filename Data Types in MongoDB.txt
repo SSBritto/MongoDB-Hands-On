@@ -1,0 +1,303 @@
+MongoDB Enterprise > show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+practice  0.001GB
+test      0.000GB
+test2     0.000GB
+MongoDB Enterprise > use practice
+switched to db practice
+MongoDB Enterprise > show collections
+acc
+author
+books
+con
+dt
+emp
+mrk
+ord
+sly
+stu
+usr
+MongoDB Enterprise > db.dt.drop()
+true
+MongoDB Enterprise > db.dt.insert({"QTY" : 50})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.insert({"QTY" : "60"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.insert({"MONGO DB - NICE MODULE" : true})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.insert({"Price" : 350.65})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.insert({"Courses" : ["SQL", "MONGODB", "POWER BI", "TABLEAU"]})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.insert({"TIME TAKEN" : {"SQL" : 10, "MONGODB" : 7, "POWERBI" : 11, "TABLEAU" : 11}})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.insert(["Email" : null, "PH" : null])
+uncaught exception: SyntaxError: missing ] after element list :
+@(shell):1:22
+MongoDB Enterprise > db.dt.insert([{"Email" : null}, {"PH" : null}])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 2,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+MongoDB Enterprise > db.dt.insert({"EMAIL" : null})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.find().pretty()
+{ "_id" : ObjectId("669410598a4b4151d3f1a5ac"), "QTY" : 50 }
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+{
+        "_id" : ObjectId("669410748a4b4151d3f1a5ae"),
+        "MONGO DB - NICE MODULE" : true
+}
+{ "_id" : ObjectId("6694108a8a4b4151d3f1a5af"), "Price" : 350.65 }
+{
+        "_id" : ObjectId("669410a68a4b4151d3f1a5b0"),
+        "Courses" : [
+                "SQL",
+                "MONGODB",
+                "POWER BI",
+                "TABLEAU"
+        ]
+}
+{
+        "_id" : ObjectId("669411008a4b4151d3f1a5b1"),
+        "TIME TAKEN" : {
+                "SQL" : 10,
+                "MONGODB" : 7,
+                "POWERBI" : 11,
+                "TABLEAU" : 11
+        }
+}
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b2"), "Email" : null }
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b3"), "PH" : null }
+{ "_id" : ObjectId("6694114c8a4b4151d3f1a5b4"), "EMAIL" : null }
+MongoDB Enterprise > db.dt.deleteOne({"_id" : ObjectId("669411378a4b4151d3f1a5b2")})
+{ "acknowledged" : true, "deletedCount" : 1 }
+MongoDB Enterprise > db.dt.find().pretty()
+{ "_id" : ObjectId("669410598a4b4151d3f1a5ac"), "QTY" : 50 }
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+{
+        "_id" : ObjectId("669410748a4b4151d3f1a5ae"),
+        "MONGO DB - NICE MODULE" : true
+}
+{ "_id" : ObjectId("6694108a8a4b4151d3f1a5af"), "Price" : 350.65 }
+{
+        "_id" : ObjectId("669410a68a4b4151d3f1a5b0"),
+        "Courses" : [
+                "SQL",
+                "MONGODB",
+                "POWER BI",
+                "TABLEAU"
+        ]
+}
+{
+        "_id" : ObjectId("669411008a4b4151d3f1a5b1"),
+        "TIME TAKEN" : {
+                "SQL" : 10,
+                "MONGODB" : 7,
+                "POWERBI" : 11,
+                "TABLEAU" : 11
+        }
+}
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b3"), "PH" : null }
+{ "_id" : ObjectId("6694114c8a4b4151d3f1a5b4"), "EMAIL" : null }
+MongoDB Enterprise > db.dt.date()
+uncaught exception: TypeError: db.dt.date is not a function :
+@(shell):1:1
+MongoDB Enterprise > var d1 = Date()
+MongoDB Enterprise > var d2 = ISODate()
+MongoDB Enterprise > db.dt.insert({"DOJ" :d1})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.find().pretty()
+{ "_id" : ObjectId("669410598a4b4151d3f1a5ac"), "QTY" : 50 }
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+{
+        "_id" : ObjectId("669410748a4b4151d3f1a5ae"),
+        "MONGO DB - NICE MODULE" : true
+}
+{ "_id" : ObjectId("6694108a8a4b4151d3f1a5af"), "Price" : 350.65 }
+{
+        "_id" : ObjectId("669410a68a4b4151d3f1a5b0"),
+        "Courses" : [
+                "SQL",
+                "MONGODB",
+                "POWER BI",
+                "TABLEAU"
+        ]
+}
+{
+        "_id" : ObjectId("669411008a4b4151d3f1a5b1"),
+        "TIME TAKEN" : {
+                "SQL" : 10,
+                "MONGODB" : 7,
+                "POWERBI" : 11,
+                "TABLEAU" : 11
+        }
+}
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b3"), "PH" : null }
+{ "_id" : ObjectId("6694114c8a4b4151d3f1a5b4"), "EMAIL" : null }
+{
+        "_id" : ObjectId("6694120e8a4b4151d3f1a5b5"),
+        "DOJ" : "Sun Jul 14 2024 23:29:04 GMT+0530 (India Standard Time)"
+}
+MongoDB Enterprise > var d3 = ISODate("2024-07-16")
+MongoDB Enterprise > db.dt.insert({"DATE OF BOARDING" : d3})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.find().pretty()
+{ "_id" : ObjectId("669410598a4b4151d3f1a5ac"), "QTY" : 50 }
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+{
+        "_id" : ObjectId("669410748a4b4151d3f1a5ae"),
+        "MONGO DB - NICE MODULE" : true
+}
+{ "_id" : ObjectId("6694108a8a4b4151d3f1a5af"), "Price" : 350.65 }
+{
+        "_id" : ObjectId("669410a68a4b4151d3f1a5b0"),
+        "Courses" : [
+                "SQL",
+                "MONGODB",
+                "POWER BI",
+                "TABLEAU"
+        ]
+}
+{
+        "_id" : ObjectId("669411008a4b4151d3f1a5b1"),
+        "TIME TAKEN" : {
+                "SQL" : 10,
+                "MONGODB" : 7,
+                "POWERBI" : 11,
+                "TABLEAU" : 11
+        }
+}
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b3"), "PH" : null }
+{ "_id" : ObjectId("6694114c8a4b4151d3f1a5b4"), "EMAIL" : null }
+{
+        "_id" : ObjectId("6694120e8a4b4151d3f1a5b5"),
+        "DOJ" : "Sun Jul 14 2024 23:29:04 GMT+0530 (India Standard Time)"
+}
+{
+        "_id" : ObjectId("669412598a4b4151d3f1a5b6"),
+        "DATE OF BOARDING" : ISODate("2024-07-16T00:00:00Z")
+}
+MongoDB Enterprise > db.dt.insert({"JOINING DATE" : Date()})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.find().pretty()
+{ "_id" : ObjectId("669410598a4b4151d3f1a5ac"), "QTY" : 50 }
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+{
+        "_id" : ObjectId("669410748a4b4151d3f1a5ae"),
+        "MONGO DB - NICE MODULE" : true
+}
+{ "_id" : ObjectId("6694108a8a4b4151d3f1a5af"), "Price" : 350.65 }
+{
+        "_id" : ObjectId("669410a68a4b4151d3f1a5b0"),
+        "Courses" : [
+                "SQL",
+                "MONGODB",
+                "POWER BI",
+                "TABLEAU"
+        ]
+}
+{
+        "_id" : ObjectId("669411008a4b4151d3f1a5b1"),
+        "TIME TAKEN" : {
+                "SQL" : 10,
+                "MONGODB" : 7,
+                "POWERBI" : 11,
+                "TABLEAU" : 11
+        }
+}
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b3"), "PH" : null }
+{ "_id" : ObjectId("6694114c8a4b4151d3f1a5b4"), "EMAIL" : null }
+{
+        "_id" : ObjectId("6694120e8a4b4151d3f1a5b5"),
+        "DOJ" : "Sun Jul 14 2024 23:29:04 GMT+0530 (India Standard Time)"
+}
+{
+        "_id" : ObjectId("669412598a4b4151d3f1a5b6"),
+        "DATE OF BOARDING" : ISODate("2024-07-16T00:00:00Z")
+}
+{
+        "_id" : ObjectId("669412878a4b4151d3f1a5b7"),
+        "JOINING DATE" : "Sun Jul 14 2024 23:31:43 GMT+0530 (India Standard Time)"
+}
+MongoDB Enterprise > var t1 = new Timestamp()
+MongoDB Enterprise > db.dt.insert({"TIME NOW" : t1})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.find().pretty()
+{ "_id" : ObjectId("669410598a4b4151d3f1a5ac"), "QTY" : 50 }
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+{
+        "_id" : ObjectId("669410748a4b4151d3f1a5ae"),
+        "MONGO DB - NICE MODULE" : true
+}
+{ "_id" : ObjectId("6694108a8a4b4151d3f1a5af"), "Price" : 350.65 }
+{
+        "_id" : ObjectId("669410a68a4b4151d3f1a5b0"),
+        "Courses" : [
+                "SQL",
+                "MONGODB",
+                "POWER BI",
+                "TABLEAU"
+        ]
+}
+{
+        "_id" : ObjectId("669411008a4b4151d3f1a5b1"),
+        "TIME TAKEN" : {
+                "SQL" : 10,
+                "MONGODB" : 7,
+                "POWERBI" : 11,
+                "TABLEAU" : 11
+        }
+}
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b3"), "PH" : null }
+{ "_id" : ObjectId("6694114c8a4b4151d3f1a5b4"), "EMAIL" : null }
+{
+        "_id" : ObjectId("6694120e8a4b4151d3f1a5b5"),
+        "DOJ" : "Sun Jul 14 2024 23:29:04 GMT+0530 (India Standard Time)"
+}
+{
+        "_id" : ObjectId("669412598a4b4151d3f1a5b6"),
+        "DATE OF BOARDING" : ISODate("2024-07-16T00:00:00Z")
+}
+{
+        "_id" : ObjectId("669412878a4b4151d3f1a5b7"),
+        "JOINING DATE" : "Sun Jul 14 2024 23:31:43 GMT+0530 (India Standard Time)"
+}
+{
+        "_id" : ObjectId("669412c58a4b4151d3f1a5b8"),
+        "TIME NOW" : Timestamp(1720980165, 1)
+}
+MongoDB Enterprise > var ob1 = ObjectId("12345678900987654321")
+Error: invalid object id: length :
+@(shell):1:11
+MongoDB Enterprise > var ob1 = ObjectId("1234567890098765")
+Error: invalid object id: length :
+@(shell):1:11
+MongoDB Enterprise > var ob1 = ObjectId("669411378a4b4151d3f1a5b3")
+MongoDB Enterprise > db.dt.insert({"Doc No." : ob1})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.dt.find()
+{ "_id" : ObjectId("669410598a4b4151d3f1a5ac"), "QTY" : 50 }
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+{ "_id" : ObjectId("669410748a4b4151d3f1a5ae"), "MONGO DB - NICE MODULE" : true }
+{ "_id" : ObjectId("6694108a8a4b4151d3f1a5af"), "Price" : 350.65 }
+{ "_id" : ObjectId("669410a68a4b4151d3f1a5b0"), "Courses" : [ "SQL", "MONGODB", "POWER BI", "TABLEAU" ] }
+{ "_id" : ObjectId("669411008a4b4151d3f1a5b1"), "TIME TAKEN" : { "SQL" : 10, "MONGODB" : 7, "POWERBI" : 11, "TABLEAU" : 11 } }
+{ "_id" : ObjectId("669411378a4b4151d3f1a5b3"), "PH" : null }
+{ "_id" : ObjectId("6694114c8a4b4151d3f1a5b4"), "EMAIL" : null }
+{ "_id" : ObjectId("6694120e8a4b4151d3f1a5b5"), "DOJ" : "Sun Jul 14 2024 23:29:04 GMT+0530 (India Standard Time)" }
+{ "_id" : ObjectId("669412598a4b4151d3f1a5b6"), "DATE OF BOARDING" : ISODate("2024-07-16T00:00:00Z") }
+{ "_id" : ObjectId("669412878a4b4151d3f1a5b7"), "JOINING DATE" : "Sun Jul 14 2024 23:31:43 GMT+0530 (India Standard Time)" }
+{ "_id" : ObjectId("669412c58a4b4151d3f1a5b8"), "TIME NOW" : Timestamp(1720980165, 1) }
+{ "_id" : ObjectId("669424fd8a4b4151d3f1a5b9"), "Doc No." : ObjectId("669411378a4b4151d3f1a5b3") }
+MongoDB Enterprise > db.dt.find({"QTY" : {$type : "string"}})
+{ "_id" : ObjectId("669410608a4b4151d3f1a5ad"), "QTY" : "60" }
+MongoDB Enterprise > 

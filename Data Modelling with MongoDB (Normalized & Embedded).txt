@@ -1,0 +1,564 @@
+MongoDB Enterprise > show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+practice  0.000GB
+test      0.000GB
+test2     0.000GB
+MongoDB Enterprise > use practice
+switched to db practice
+MongoDB Enterprise > show collections
+mrk
+ord
+stu
+MongoDB Enterprise > db.usr.insert({"UID" : "U1", "UNAME" : "ROBERT"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.usr.insertMany([{"UID" : "U2", "UNAME" : "DHAYALAN"}, {"UID" : "U3", "UNAME" : "DHEENA"}, {"UID" : "U4", "UNAME" : "KAUSHIKA"}, {"UID" : "U5", "UNAME" : "PREETHIKA"}])any([{"UID" : "U2", "UNAME" : "DHAYALAN"}, {"UID" : "U3", "UNAME" : "DHEENA"}, {"UID" : "U4", "UNAME" : "KAUSHIKA"}, {}])
+{rd                  db.usr.insertMany([{"UID" : "U2", "UNAME" : "DHAYALAN"}, {"UID" : "U3", "UNAME" : "DHEENA"}, {"UID" : "U4", "UNAME" : "KAUSHIKA"}, {}])stu     "acknowledged" : true,sertMany([{"UID" : "U2", "UNAME" : "DHAYALAN"}, {"UID" : "U3", "UNAME" : "DHEENA"}, {"UID" : "U4", "UNAME" : "KAUSHIKA", ""}])usr     "insertedIds" : [sr.insertMany([{"UID" : "U2", "UNAME" : "DHAYALAN"}, {"UID" : "U3", "UNAME" : "DHEENA"}, {"UID" : "U4", "UNAME" : "KAUSHIKA", ""}])MongoDB EnterpriObjectId("66937c3d939a7b16eb4e4b4e"),, "UNAME" : "DHAYALAN"}, {"UID" : "U3", "UNAME" : "DHEENA"}, {"UID" : "U4", "UNAME" : "KAUSHIKA", ""}])                ObjectId("66937c3d939a7b16eb4e4b4f"),
+                ObjectId("66937c3d939a7b16eb4e4b50"),
+                ObjectId("66937c3d939a7b16eb4e4b51")
+        ]
+}
+MongoDB Enterprise > db.usr.find().pretty()
+{
+        "_id" : ObjectId("66937bd4939a7b16eb4e4b4d"),
+        "UID" : "U1",
+        "UNAME" : "ROBERT"
+}
+{
+        "_id" : ObjectId("66937c3d939a7b16eb4e4b4e"),
+        "UID" : "U2",
+        "UNAME" : "DHAYALAN"
+}
+{
+        "_id" : ObjectId("66937c3d939a7b16eb4e4b4f"),
+        "UID" : "U3",
+        "UNAME" : "DHEENA"
+}
+{
+        "_id" : ObjectId("66937c3d939a7b16eb4e4b50"),
+        "UID" : "U4",
+        "UNAME" : "KAUSHIKA"
+}
+{
+        "_id" : ObjectId("66937c3d939a7b16eb4e4b51"),
+        "UID" : "U5",
+        "UNAME" : "PREETHIKA"
+}
+MongoDB Enterprise > db.createCollection("con")
+{ "ok" : 1 }
+MongoDB Enterprise > db.con.insert({"UID" : "U1", "PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM"})
+WriteResult({ "nInserdb.con.insertMany([{"UID" : "U2", "PH" : "9926718940", "MAIL" : "DHAYA@HOTMAIL.COM"}, {"UID" : "U3", "PH" : "8823769690", "MAIL" : "DHEE@GMAIL.COM"}])ise > db.con.insertMany([{"UID" : "U2", "PH" : "9926718940", "MAIL" : "DHAYA@HOTMAIL.COM"}, {"UID" : "U3", "PH" : "8823769690", "MAIL" : "}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66937d12939a7b16eb4e4b53"),
+                ObjectId("66937d12939a7b16eb4e4b54")
+        ]
+}
+MongoDB Enterprise > db.con.find()
+{ "_id" : ObjectId("66937cae939a7b16eb4e4b52"), "UID" : "U1", "PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM" }
+{ "_id" : ObjectId("6db.con.insertMany([{"UID" : "U4", "PH" : "9923561890", "MAIL" : "KAUSHY@YAHOO.COM"}, {"UID" : "U5", "PH" : "7783921655", "MAIL" : "PREETHI@OUTLOOK.COM"}])"6db.con.insertMany([{"UID" : "U4", "PH" : "9923561890", "MAIL" : "KAUSHY@YAHOO.COM"}, {"UID" : "U5", "PH" : "7783921655", "MAIL" : ""}])
+{ongoDB Enterprise > db.con.insertMany([{"UID" : "U4", "PH" : "9923561890", "MAIL" : "KAUSHY@YAHOO.COM"}, {"UID" : "U5", "PH" : "7783921655", "MAIL" : ""}])
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66937d79939a7b16eb4e4b55"),
+                ObjectId("66937d79939a7b16eb4e4b56")
+        ]
+}
+MongoDB Enterprise > db.con.find().pretty()
+{
+        "_id" : ObjectId("66937cae939a7b16eb4e4b52"),
+        "UID" : "U1",
+        "PH" : "9936729810",
+        "MAIL" : "ROBERT@GMAIL.COM"
+}
+{
+        "_id" : ObjectId("66937d12939a7b16eb4e4b53"),
+        "UID" : "U2",
+        "PH" : "9926718940",
+        "MAIL" : "DHAYA@HOTMAIL.COM"
+}
+{
+        "_id" : ObjectId("66937d12939a7b16eb4e4b54"),
+        "UID" : "U3",
+        "PH" : "8823769690",
+        "MAIL" : "DHEE@GMAIL.COM"
+}
+{
+        "_id" : ObjectId("66937d79939a7b16eb4e4b55"),
+        "UID" : "U4",
+        "PH" : "9923561890",
+        "MAIL" : "KAUSHY@YAHOO.COM"
+}
+{
+        "_id" : ObjectId("66937d79939a7b16eb4e4b56"),
+        "UID" : "U5",
+        "PH" : "7783921655",
+        "MAIL" : "PREETHI@OUTLOOK.COM"
+}
+MongoDB Enterprise > db.acc.insertOne({"UID" : "U1", "DEPT" : "HR", "ACCESS" : "REWRITE"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("66937db5939a7b16eb4e4b57")
+}
+MongoDB Enterprise > db.acc.insert({"UID" : "U2", "DEPT" : "MIS", "ACCESS" : "READ ONLY"})
+WriteResult({ "nInserdb.acc.insertMany([{"UID" : "U3", "DEPT" : "OPS", "ACCESS" : "READ ONLY"}], {"UID" : "U4", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"}, {"UID" : "U5", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"})DEPT" : "OPS", "ACCESS" : "READ ONLY"}], {"UID" : "U4", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"}, )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66937e53939a7b16eb4e4b59")
+        ]
+}
+MongoDB Enterprise > db.acc.find().pretty()
+{
+        "_id" : ObjectId("66937db5939a7b16eb4e4b57"),
+        "UID" : "U1",
+        "DEPT" : "HR",
+        "ACCESS" : "REWRITE"
+}
+{
+        "_id" : ObjectId("66937dd7939a7b16eb4e4b58"),
+        "UID" : "U2",
+        "DEPT" : "MIS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937e53939a7b16eb4e4b59"),
+        "UID" : "U3",
+        "DEPT" : "OPS",
+        "ACCESS" : "READ ONLY"
+}
+MongoDB Enterprise > db.acc.insertMany([{"UID" : "U3", "DEPT" : "OPS", "ACCESS" : "READ ONLY"}], {"UID" : "U4", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"}, {"UID" : "U5", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"})
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66937e89939a7b16eb4e4b5a")
+        ]
+}
+MongoDB Enterprise > db.acc.find().pretty()
+{
+        "_id" : ObjectId("66937db5939a7b16eb4e4b57"),
+        "UID" : "U1",
+        "DEPT" : "HR",
+        "ACCESS" : "REWRITE"
+}
+{
+        "_id" : ObjectId("66937dd7939a7b16eb4e4b58"),
+        "UID" : "U2",
+        "DEPT" : "MIS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937e53939a7b16eb4e4b59"),
+        "UID" : "U3",
+        "DEPT" : "OPS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937e89939a7b16eb4e4b5a"),
+        "UID" : "U3",
+        "DEPT" : "OPS",
+        "ACCESS" : "READ ONLY"
+}                    db.acc.insertMany([{"UID" : "U4", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"}, {"UID" : "U5", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"}])
+{ongoDB Enterprise > db.acc.insertMany([{"UID" : "U4", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"}, {"UID" : "U5", "DEPT" : "HR", "ACCESS" : "FULL CONTROL"}])
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66937ef7939a7b16eb4e4b5b"),
+                ObjectId("66937ef7939a7b16eb4e4b5c")
+        ]
+}
+MongoDB Enterprise > d.acc.find().pretty()
+uncaught exception: ReferenceError: d is not defined :
+@(shell):1:1
+MongoDB Enterprise > db .acc.find().pretty()
+{
+        "_id" : ObjectId("66937db5939a7b16eb4e4b57"),
+        "UID" : "U1",
+        "DEPT" : "HR",
+        "ACCESS" : "REWRITE"
+}
+{
+        "_id" : ObjectId("66937dd7939a7b16eb4e4b58"),
+        "UID" : "U2",
+        "DEPT" : "MIS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937e53939a7b16eb4e4b59"),
+        "UID" : "U3",
+        "DEPT" : "OPS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937e89939a7b16eb4e4b5a"),
+        "UID" : "U3",
+        "DEPT" : "OPS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937ef7939a7b16eb4e4b5b"),
+        "UID" : "U4",
+        "DEPT" : "HR",
+        "ACCESS" : "FULL CONTROL"
+}
+{
+        "_id" : ObjectId("66937ef7939a7b16eb4e4b5c"),
+        "UID" : "U5",
+        "DEPT" : "HR",
+        "ACCESS" : "FULL CONTROL"
+}
+MongoDB Enterprise > db.acc.deleteOne({"_id" : ObjectId("66937e89939a7b16eb4e4b5a")})
+{ "acknowledged" : true, "deletedCount" : 1 }
+MongoDB Enterprise > db.acc.find().pretty()
+{
+        "_id" : ObjectId("66937db5939a7b16eb4e4b57"),
+        "UID" : "U1",
+        "DEPT" : "HR",
+        "ACCESS" : "REWRITE"
+}
+{
+        "_id" : ObjectId("66937dd7939a7b16eb4e4b58"),
+        "UID" : "U2",
+        "DEPT" : "MIS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937e53939a7b16eb4e4b59"),
+        "UID" : "U3",
+        "DEPT" : "OPS",
+        "ACCESS" : "READ ONLY"
+}
+{
+        "_id" : ObjectId("66937ef7939a7b16eb4e4b5b"),
+        "UID" : "U4",
+        "DEPT" : "HR",
+        "ACCESS" : "FULL CONTROL"
+}
+{
+        "_id" : ObjectId("66937ef7939a7b16eb4e4b5c"),
+        "UID" : "U5",
+        "DEPT" : "HR",
+        "ACCESS" : "FULL CONTROL"
+}
+MongoDB Enterprise > d
+uncaught exception: ReferenceError: d is not defined :
+@(shell):1:1
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.createCollection("sly", {capped : true, max : 6, size : 1000})
+{ "ok" : 1 }
+MongoDB Enterprise > show collections
+acc
+con
+mrk
+ord
+sly
+stu
+usr
+MongoDB Enterprise > db.sly.insert({"UID" : "U1", "SAL" : 300000})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.sly.insertOne({"UID" : "U2", "SAL" : 450000})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("66937fab939a7b16eb4e4b5e")
+}
+MongoDB Enterprise > db.sly.insertMany([{"UID" : "U3", "SAL" : 345000}, {"UID" : "U4", "SAL" : 500000}, {"UID" : "U5", "SAL" : 500000}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66937fe3939a7b16eb4e4b5f"),
+                ObjectId("66937fe3939a7b16eb4e4b60"),
+                ObjectId("66937fe3939a7b16eb4e4b61")
+        ]
+}
+MongoDB Enterprise > db.sly.find().pretty()
+{
+        "_id" : ObjectId("66937f88939a7b16eb4e4b5d"),
+        "UID" : "U1",
+        "SAL" : 300000
+}
+{
+        "_id" : ObjectId("66937fab939a7b16eb4e4b5e"),
+        "UID" : "U2",
+        "SAL" : 450000
+}
+{
+        "_id" : ObjectId("66937fe3939a7b16eb4e4b5f"),
+        "UID" : "U3",
+        "SAL" : 345000
+}
+{
+        "_id" : ObjectId("66937fe3939a7b16eb4e4b60"),
+        "UID" : "U4",
+        "SAL" : 500000
+}
+{
+        "_id" : ObjectId("66937fe3939a7b16eb4e4b61"),
+        "UID" : "U5",
+        "SAL" : 500000
+}
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.usr.find()
+{ "_id" : ObjectId("66937bd4939a7b16eb4e4b4d"), "UID" : "U1", "UNAME" : "ROBERT" }
+{ "_id" : ObjectId("66937c3d939a7b16eb4e4b4e"), "UID" : "U2", "UNAME" : "DHAYALAN" }
+{ "_id" : ObjectId("66937c3d939a7b16eb4e4b4f"), "UID" : "U3", "UNAME" : "DHEENA" }
+{ "_id" : ObjectId("66937c3d939a7b16eb4e4b50"), "UID" : "U4", "UNAME" : "KAUSHIKA" }
+{ "_id" : ObjectId("66937c3d939a7b16eb4e4b51"), "UID" : "U5", "UNAME" : "PREETHIKA" }
+MongoDB Enterprise > db.con.find()
+{ "_id" : ObjectId("66937cae939a7b16eb4e4b52"), "UID" : "U1", "PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM" }
+{ "_id" : ObjectId("66937d12939a7b16eb4e4b53"), "UID" : "U2", "PH" : "9926718940", "MAIL" : "DHAYA@HOTMAIL.COM" }
+{ "_id" : ObjectId("66937d12939a7b16eb4e4b54"), "UID" : "U3", "PH" : "8823769690", "MAIL" : "DHEE@GMAIL.COM" }
+{ "_id" : ObjectId("66937d79939a7b16eb4e4b55"), "UID" : "U4", "PH" : "9923561890", "MAIL" : "KAUSHY@YAHOO.COM" }
+{ "_id" : ObjectId("66937d79939a7b16eb4e4b56"), "UID" : "U5", "PH" : "7783921655", "MAIL" : "PREETHI@OUTLOOK.COM" }
+MongoDB Enterprise > db.acc.find()
+{ "_id" : ObjectId("66937db5939a7b16eb4e4b57"), "UID" : "U1", "DEPT" : "HR", "ACCESS" : "REWRITE" }
+{ "_id" : ObjectId("66937dd7939a7b16eb4e4b58"), "UID" : "U2", "DEPT" : "MIS", "ACCESS" : "READ ONLY" }
+{ "_id" : ObjectId("66937e53939a7b16eb4e4b59"), "UID" : "U3", "DEPT" : "OPS", "ACCESS" : "READ ONLY" }
+{ "_id" : ObjectId("66937ef7939a7b16eb4e4b5b"), "UID" : "U4", "DEPT" : "HR", "ACCESS" : "FULL CONTROL" }
+{ "_id" : ObjectId("66937ef7939a7b16eb4e4b5c"), "UID" : "U5", "DEPT" : "HR", "ACCESS" : "FULL CONTROL" }
+MongoDB Enterprise > db.sly.find()
+{ "_id" : ObjectId("66937f88939a7b16eb4e4b5d"), "UID" : "U1", "SAL" : 300000 }
+{ "_id" : ObjectId("66937fab939a7b16eb4e4b5e"), "UID" : "U2", "SAL" : 450000 }
+{ "_id" : ObjectId("66937fe3939a7b16eb4e4b5f"), "UID" : "U3", "SAL" : 345000 }
+{ "_id" : ObjectId("66937fe3939a7b16eb4e4b60"), "UID" : "U4", "SAL" : 500000 }
+{ "_id" : ObjectId("66937fe3939a7b16eb4e4b61"), "UID" : "U5", "SAL" : 500000 }
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.createCollection("emp")
+{ "ok" : 1 }         db.emp.insert({"UID" : "U1", "UNAME" : "ROBERT", "CONTACT" : {"PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM"}, "ACCESS" : {"DEPT" : "HR", "ACC" : "REWRITE"}, "SALARY DETAILS" : {"SAL" : 300000}})OBERT", "CONTACT" : {"PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM"}, "ACCESS" : {"DEPT" }})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.emp.find()
+{ "_id" : ObjectId("669380be939a7b16eb4e4b62"), "UID" : "U1", "UNAME" : "ROBERT", "CONTACT" : { "PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM" }, "ACCESS" : { "DEPT" : "HR", "ACC" : "REWRITE" }, "SALARY DETAILS" : { "SAL" : 300000 } }
+MongoDB Enterprise > db.emp.findOne()
+{
+        "_id" : ObjectId("669380be939a7b16eb4e4b62"),
+        "UID" : "U1",
+        "UNAME" : "ROBERT",
+        "CONTACT" : {
+                "PH" : "9936729810",
+                "MAIL" : "ROBERT@GMAIL.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "HR",
+                "ACC" : "REWRITE"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 300000
+        }
+}
+MongoDB Enterprise > db.emp.insert({"UID" : "U1", "UNAME" : "DHAYALAN", "CONTACT" : {"PH" : "9926718940", "MAIL" : "DHAYA@HOTMAIL.COM"}, "ACCESS" : {"DEPT": "MIS", "ACC" : "READ ONLY"}, "SALARY DETAILS" : {"SAL" : 450000}})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.emp.find()
+{ "_id" : ObjectId("669380be939a7b16eb4e4b62"), "UID" : "U1", "UNAME" : "ROBERT", "CONTACT" : { "PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM" }, "ACCESS" : { "DEPT" : "HR", "ACC" : "REWRITE" }, "SALARY DETAILS" : { "SAL" : 300000 } }
+{ "_id" : ObjectId("66938115939a7b16eb4e4b63"), "UID" : "U1", "UNAME" : "DHAYALAN", "CONTACT" : { "PH" : "9926718940", "MAIL" : "DHAYA@HOTMAIL.COM" }, "ACCESS" : { "DEPT" : "MIS", "ACC" : "READ ONLY" }, "SALARY DETAILS" : { "SAL" : 450000 } }
+MongoDB Enterprise > db.emp.find().pretty()
+{
+        "_id" : ObjectId("669380be939a7b16eb4e4b62"),
+        "UID" : "U1",
+        "UNAME" : "ROBERT",
+        "CONTACT" : {
+                "PH" : "9936729810",
+                "MAIL" : "ROBERT@GMAIL.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "HR",
+                "ACC" : "REWRITE"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 300000
+        }
+}
+{
+        "_id" : ObjectId("66938115939a7b16eb4e4b63"),
+        "UID" : "U1",
+        "UNAME" : "DHAYALAN",
+        "CONTACT" : {
+                "PH" : "9926718940",
+                "MAIL" : "DHAYA@HOTMAIL.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "MIS",
+                "ACC" : "READ ONLY"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 450000
+        }
+}                    db.emp.replaceOne({"UNAME" : "DHAYALAN"}, {"UID" : "U2", "UNAME" : "DHAYALAN", "CONTACT" : {"PH" : "6698542990", "MAIL" : "DHAYA@HOTMAIL.COM", "ACCESS" : {"ACC" : "MIS"}, "SALARY DETAILS" : {"SAL" : "450000"}}}), "UNAME" : "DHAYALAN", "CONTACT" : {"PH" : "6698542990", "MAIL" : "DHAYA@HO"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.emp.find().pretty()
+{
+        "_id" : ObjectId("669380be939a7b16eb4e4b62"),
+        "UID" : "U1",
+        "UNAME" : "ROBERT",
+        "CONTACT" : {
+                "PH" : "9936729810",
+                "MAIL" : "ROBERT@GMAIL.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "HR",
+                "ACC" : "REWRITE"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 300000
+        }
+}
+{
+        "_id" : ObjectId("66938115939a7b16eb4e4b63"),
+        "UID" : "U2",
+        "UNAME" : "DHAYALAN",
+        "CONTACT" : {
+                "PH" : "6698542990",
+                "MAIL" : "DHAYA@HOTMAIL.COM",
+                "ACCESS" : {
+                        "ACC" : "MIS"
+                },
+                "SALARY DETAILS" : {
+                        "SAL" : "450000"
+                }
+        }
+}
+MongoDB Enterprise > db.emp.replaceOne({"UNAME" : "DHAYALAN"}, {"UID" : "U2", "UNAME" : "DHAYALAN", "CONTACT" : {"PH" : "6698542990", "MAIL" : "DHAYA@HOTMAIL.COM", "ACCESS" : {"DEPT" : "MIS", "ACC" : "READ ONLY"}, "SALARY DETAILS" : {"SAL" : "450000"}}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.emp.find().pretty()
+{
+        "_id" : ObjectId("669380be939a7b16eb4e4b62"),
+        "UID" : "U1",
+        "UNAME" : "ROBERT",
+        "CONTACT" : {
+                "PH" : "9936729810",
+                "MAIL" : "ROBERT@GMAIL.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "HR",
+                "ACC" : "REWRITE"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 300000
+        }
+}
+{
+        "_id" : ObjectId("66938115939a7b16eb4e4b63"),
+        "UID" : "U2",
+        "UNAME" : "DHAYALAN",
+        "CONTACT" : {
+                "PH" : "6698542990",
+                "MAIL" : "DHAYA@HOTMAIL.COM",
+                "ACCESS" : {
+                        "DEPT" : "MIS",
+                        "ACC" : "READ ONLY"
+                },
+                "SALARY DETAILS" : {
+                        "SAL" : "450000"
+                }
+        }
+}
+MongoDB Enterprise > db.emp.insert({"UID" : "U3", "UNAME" : "DHEENA", "CONTACT" : {"PH" : "8823769690", "MAIL" : "DHEE@GMAIL.COM"}, "ACCESS" : {"DEPT" : "OPS", "ACC" : "READ ONLY"}, "SALARY DETAILS" : {"SAL" : 345000}})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.emp.insert({"UID" : "U4", "UNAME" : "KAUSHIKA", "CONTACT" : {"PH" : "9923561890", "MAIL" : "KAUSHY@YAHOO.COM"}, "ACCESS" : {"DEPT" : "HR", "ACC" : "FULL CONTROL"}, "SALARY DETAILS" : {"SAL" : 500000}})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.emp.insert({"UID" : "U5", "UNAME" : "PREETHIKA", "CONTACT" : {"PH" : "7783921655", "MAIL" : "PREETHI@OUTLOOK.COM"}, "ACCESS" : {"DEPT" : "HR", "ACC" : "FULL CONTROL"}, "SALARY DETAILS" : {"SAL" : 500000}})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.emp.find().pretty()
+{
+        "_id" : ObjectId("669380be939a7b16eb4e4b62"),
+        "UID" : "U1",
+        "UNAME" : "ROBERT",
+        "CONTACT" : {
+                "PH" : "9936729810",
+                "MAIL" : "ROBERT@GMAIL.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "HR",
+                "ACC" : "REWRITE"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 300000
+        }
+}
+{
+        "_id" : ObjectId("66938115939a7b16eb4e4b63"),
+        "UID" : "U2",
+        "UNAME" : "DHAYALAN",
+        "CONTACT" : {
+                "PH" : "6698542990",
+                "MAIL" : "DHAYA@HOTMAIL.COM",
+                "ACCESS" : {
+                        "DEPT" : "MIS",
+                        "ACC" : "READ ONLY"
+                },
+                "SALARY DETAILS" : {
+                        "SAL" : "450000"
+                }
+        }
+}
+{
+        "_id" : ObjectId("669382a5939a7b16eb4e4b64"),
+        "UID" : "U3",
+        "UNAME" : "DHEENA",
+        "CONTACT" : {
+                "PH" : "8823769690",
+                "MAIL" : "DHEE@GMAIL.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "OPS",
+                "ACC" : "READ ONLY"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 345000
+        }
+}
+{
+        "_id" : ObjectId("669382e6939a7b16eb4e4b65"),
+        "UID" : "U4",
+        "UNAME" : "KAUSHIKA",
+        "CONTACT" : {
+                "PH" : "9923561890",
+                "MAIL" : "KAUSHY@YAHOO.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "HR",
+                "ACC" : "FULL CONTROL"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 500000
+        }
+}
+{
+        "_id" : ObjectId("66938315939a7b16eb4e4b66"),
+        "UID" : "U5",
+        "UNAME" : "PREETHIKA",
+        "CONTACT" : {
+                "PH" : "7783921655",
+                "MAIL" : "PREETHI@OUTLOOK.COM"
+        },
+        "ACCESS" : {
+                "DEPT" : "HR",
+                "ACC" : "FULL CONTROL"
+        },
+        "SALARY DETAILS" : {
+                "SAL" : 500000
+        }
+}
+MongoDB Enterprise >
+MongoDB Enterprise >
+

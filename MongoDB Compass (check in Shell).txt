@@ -1,0 +1,76 @@
+MongoDB Enterprise > show dbs
+AF           0.000GB
+IMG          0.000GB
+IMG_2        0.004GB
+NEW_COMPASS  0.000GB
+VF           1.176GB
+admin        0.000GB
+config       0.000GB
+local        0.000GB
+new          0.000GB
+practice     0.001GB
+test         0.000GB
+test2        0.000GB
+MongoDB Enterprise > use NEW_COMPASS
+switched to db NEW_COMPASS
+MongoDB Enterprise > show collections
+stu_com
+MongoDB Enterprise > db.stu_com.find().pretty()
+{
+        "_id" : ObjectId("6694a84de12e40a90dc2d6b5"),
+        "RNO" : "1",
+        "NAME" : "AJAY",
+        "CLS" : "9th",
+        "AGE" : NumberLong(15)
+}
+{
+        "_id" : ObjectId("6694a89de12e40a90dc2d6b6"),
+        "RNO" : "2",
+        "NAME" : "ABDHUL KADHIR",
+        "CLS" : "9th",
+        "AGE" : NumberLong(15)
+}
+{
+        "_id" : ObjectId("6694a8e2e12e40a90dc2d6b7"),
+        "RNO" : "3",
+        "NAME" : "BABU",
+        "CLS" : "9th",
+        "AGE" : "15"
+}
+{
+        "_id" : ObjectId("6694a91be12e40a90dc2d6b8"),
+        "RNO" : "4",
+        "NAME" : "BABITH",
+        "CLS" : "9th",
+        "AGE" : NumberLong(15)
+}
+{
+        "_id" : ObjectId("6694a943e12e40a90dc2d6b9"),
+        "RNO" : "5",
+        "NAME" : "CHARLIE",
+        "CLS" : "9th",
+        "AGE" : NumberLong(15)
+}
+MongoDB Enterprise > show collections
+EMP_COMPASS
+stu_com
+MongoDB Enterprise > show dbs
+AF           0.000GB
+IMG          0.000GB
+IMG_2        0.004GB
+NEW_COMPASS  0.000GB
+VF           1.176GB
+admin        0.000GB
+config       0.000GB
+local        0.000GB
+new          0.000GB
+practice     0.001GB
+test         0.000GB
+test2        0.000GB
+MongoDB Enterprise > use NEW_COMPASS
+switched to db NEW_COMPASS
+MongoDB Enterprise > show collections
+EMP_COMPASS
+EMP_COM_SAL
+stu_com
+MongoDB Enterprise >

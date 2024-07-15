@@ -1,0 +1,570 @@
+MongoDB Enterprise > show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+practice  0.000GB
+test      0.000GB
+test2     0.000GB
+MongoDB Enterprise > use practice
+switched to db practice
+MongoDB Enterprise > db.ord.drop()
+true
+MongoDB Enterprise > show collections
+mrk
+stu
+MongoDB Enterprise > db.createCollection("ord")
+{ "ok" : 1 }         db.ord.insert({"PID" : "P001", "PDESC" : "DELL MOUSE", "PRICE" : 300, "TSTK" : 55, "BSTK" : 49, "PBY" : [{"CID" : "C001", "CNAME" : "KUMARASEN", "PDATE" : "11/JUL/24"}, {"CID" : "C002", "CNAME" : "ALLOY COMPUTERS", "PDATE" : "11/JUL/24"}]})BSTK" : 49, "PBY" : [{"CID" : "C001", "CNAME" :}]})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.ord.insert({"PID" : "P002", "PDESC" : "DELL KEYBOARD", "PRICE" : 550, "TSTK" : 60, "BSTK" : 20, "PBY" : [{"CID" : "C003", "CNAME" :"PREM AANAND", "PDATE" : "11/JUL/24"}, {"CID" : "C002", "CNAME" : "ALLOY COMPUTERS", "PDATE" : "11/JUL/24"}]})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.ord.insert({"PID" : "P003", "PDESC" : "HP MOUSE PAD", "PRICE" : 780, "TSTK" : 45, "BSTK" : 21, "PBY" : [{"CID" : "C004", "CNAME" : "BALADHANEESH", "PDATE" : "12/JUL/24"}, {"CID" : "C005", "CNAME" : "GRACE COMPUTER TECH", "PDATE" : "12/JUL/24"}]})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise >
+MongoDB Enterprise > db.ord.find().pretty()
+{
+        "_id" : ObjectId("6692b4491ac66ed471a7bc2a"),
+        "PID" : "P001",
+        "PDESC" : "DELL MOUSE",
+        "PRICE" : 300,
+        "TSTK" : 55,
+        "BSTK" : 49,
+        "PBY" : [
+                {
+                        "CID" : "C001",
+                        "CNAME" : "KUMARASEN",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b48e1ac66ed471a7bc2b"),
+        "PID" : "P002",
+        "PDESC" : "DELL KEYBOARD",
+        "PRICE" : 550,
+        "TSTK" : 60,
+        "BSTK" : 20,
+        "PBY" : [
+                {
+                        "CID" : "C003",
+                        "CNAME" : "PREM AANAND",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b4f71ac66ed471a7bc2c"),
+        "PID" : "P003",
+        "PDESC" : "HP MOUSE PAD",
+        "PRICE" : 780,
+        "TSTK" : 45,
+        "BSTK" : 21,
+        "PBY" : [
+                {
+                        "CID" : "C004",
+                        "CNAME" : "BALADHANEESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C005",
+                        "CNAME" : "GRACE COMPUTER TECH",
+                        "PDATE" : "12/JUL/24"
+                }
+        ]
+}
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.ord.insert({"PID" : "P004", "PDESC" : "HP 32INCH COMPUTER SCREEN", "PRICE" : 22000, "TSTK" : 20, "BSTK" : 12, "PBY" : [{"CID" : "C006", "CNAME" : "PRENEETHA GANESH", "PDATE" : "12/JUL/24"}, {"CID" : "C007", "CNAME" : "GEO STEPHAN", "PDATE" : "12/JUL/24"}, {"CID" : "C008", "CNAME" : "RAMKUMAR", "PDATE" : "13/JUL/24"}]}), "PDATE" : "12/JUL/24"}, {"CID" : "C007", "CNAME" : "GEO STEPHAN", "PDATE" : "12/JUL/24"}, {"CID" : "C008", "CNAME" : "}]})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.ord.find().pretty()
+{
+        "_id" : ObjectId("6692b4491ac66ed471a7bc2a"),
+        "PID" : "P001",
+        "PDESC" : "DELL MOUSE",
+        "PRICE" : 300,
+        "TSTK" : 55,
+        "BSTK" : 49,
+        "PBY" : [
+                {
+                        "CID" : "C001",
+                        "CNAME" : "KUMARASEN",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b48e1ac66ed471a7bc2b"),
+        "PID" : "P002",
+        "PDESC" : "DELL KEYBOARD",
+        "PRICE" : 550,
+        "TSTK" : 60,
+        "BSTK" : 20,
+        "PBY" : [
+                {
+                        "CID" : "C003",
+                        "CNAME" : "PREM AANAND",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b4f71ac66ed471a7bc2c"),
+        "PID" : "P003",
+        "PDESC" : "HP MOUSE PAD",
+        "PRICE" : 780,
+        "TSTK" : 45,
+        "BSTK" : 21,
+        "PBY" : [
+                {
+                        "CID" : "C004",
+                        "CNAME" : "BALADHANEESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C005",
+                        "CNAME" : "GRACE COMPUTER TECH",
+                        "PDATE" : "12/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b5a81ac66ed471a7bc2d"),
+        "PID" : "P004",
+        "PDESC" : "HP 32INCH COMPUTER SCREEN",
+        "PRICE" : 22000,
+        "TSTK" : 20,
+        "BSTK" : 12,
+        "PBY" : [
+                {
+                        "CID" : "C006",
+                        "CNAME" : "PRENEETHA GANESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C007",
+                        "CNAME" : "GEO STEPHAN",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C008",
+                        "CNAME" : "RAMKUMAR",
+                        "PDATE" : "13/JUL/24"
+                }
+        ]
+}                    db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b4491ac66ed471a7bc2a")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" : -1}, $push : {"PBY" : {"CID" : "C009", "CNAME" : "GAURAV", "PDATE" : "13/JUL/24"}}}})ac66ed471a7bc2a")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {""}}})
+{ongoDB Enterprise > db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b4491ac66ed471a7bc2a")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {""}}})
+        "_id" : ObjectId("6692b4491ac66ed471a7bc2a"),
+        "PID" : "P001",
+        "PDESC" : "DELL MOUSE",
+        "PRICE" : 300,
+        "TSTK" : 55,
+        "BSTK" : 49,
+        "PBY" : [
+                {
+                        "CID" : "C001",
+                        "CNAME" : "KUMARASEN",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+MongoDB Enterprise > db.ord.find().pretty()
+{
+        "_id" : ObjectId("6692b4491ac66ed471a7bc2a"),
+        "PID" : "P001",
+        "PDESC" : "DELL MOUSE",
+        "PRICE" : 300,
+        "TSTK" : 55,
+        "BSTK" : 48,
+        "PBY" : [
+                {
+                        "CID" : "C001",
+                        "CNAME" : "KUMARASEN",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C009",
+                        "CNAME" : "GAURAV",
+                        "PDATE" : "13/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b48e1ac66ed471a7bc2b"),
+        "PID" : "P002",
+        "PDESC" : "DELL KEYBOARD",
+        "PRICE" : 550,
+        "TSTK" : 60,
+        "BSTK" : 20,
+        "PBY" : [
+                {
+                        "CID" : "C003",
+                        "CNAME" : "PREM AANAND",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b4f71ac66ed471a7bc2c"),
+        "PID" : "P003",
+        "PDESC" : "HP MOUSE PAD",
+        "PRICE" : 780,
+        "TSTK" : 45,
+        "BSTK" : 21,
+        "PBY" : [
+                {
+                        "CID" : "C004",
+                        "CNAME" : "BALADHANEESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C005",
+                        "CNAME" : "GRACE COMPUTER TECH",
+                        "PDATE" : "12/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b5a81ac66ed471a7bc2d"),
+        "PID" : "P004",
+        "PDESC" : "HP 32INCH COMPUTER SCREEN",
+        "PRICE" : 22000,
+        "TSTK" : 20,
+        "BSTK" : 12,
+        "PBY" : [
+                {
+                        "CID" : "C006",
+                        "CNAME" : "PRENEETHA GANESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C007",
+                        "CNAME" : "GEO STEPHAN",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C008",
+                        "CNAME" : "RAMKUMAR",
+                        "PDATE" : "13/JUL/24"
+                }
+        ]            db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" " -2}, $push : {"PBY" : [{"CID" : "C010", "CNAME" : "SAMYUKTHA", "PDATE" : "14/JUL/24"}, {"CID" : "C011", "CNAME" : "CHARLIE", "PDATE" : "14/JUL/24"}]}}}))
+uncaught exception: SyntaxError: missing : after property id :_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {""}}})
+@(shell):1:136
+MongoDB Enterprise > db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" " -2}, $push : {"PBY" : [{"CID" : "C010", "CNAME" : "SAMYUKTHA", "PDATE" : "14/JUL/24"}, {"CID" : "C011", "CNAME" : "CHARLIE", "PDATE" : "14/JUL/24"}]}}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:136
+MongoDB Enterprise > db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" " -2}, $push : {"PBY" : [{"CID" : "C010", "CNAME" : "SAMYUKTHA", "PDATE" : "14/JUL/24"}, {"CID" : "C011", "CNAME" : "CHARLIE", "PDATE" : "14/JUL/24"}]}}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:136
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK"
+MongoDB Enterprise >                                                                                                                                       "
+MongoDB Enterprise >
+MongoDB Enterprise > db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" : -1, $push : {"PBY" : {"CID" : "C010", "CNAME" : "SAMYUKTHA", "PDATE" : "14/JUL/24"}}}}})6ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {""}}})
+uncaught exception: Error: findAndModifyFailed failed: { : [{"_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {""}}})
+        "ok" : 0,
+        "errmsg" : "Cannot increment with non-numeric argument: {$push: { PBY: { CID: \"C010\", CNAME: \"SAMYUKTHA\", PDATE: \"14/JUL/24\" } }}",
+        "code" : 14,
+        "codeName" : "TypeMismatch"
+} :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+DBCollection.prototype.findAndModify@src/mongo/shell/collection.js:742:15
+@(shell):1:1
+MongoDB Enterprise > db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b5a81ac66ed471a7bc2d")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" : -1}, $push : {"PBY" : {"CID" : "C010", "CNAME" : "SAMYUKTHA", "PDATE" : "14/JUL/24"}}}})
+{
+        "_id" : ObjectId("6692b5a81ac66ed471a7bc2d"),
+        "PID" : "P004",
+        "PDESC" : "HP 32INCH COMPUTER SCREEN",
+        "PRICE" : 22000,
+        "TSTK" : 20,
+        "BSTK" : 12,
+        "PBY" : [
+                {
+                        "CID" : "C006",
+                        "CNAME" : "PRENEETHA GANESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C007",
+                        "CNAME" : "GEO STEPHAN",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C008",
+                        "CNAME" : "RAMKUMAR",
+                        "PDATE" : "13/JUL/24"
+                }
+        ]
+}
+MongoDB Enterprise > db.ord.find().pretty()
+{
+        "_id" : ObjectId("6692b4491ac66ed471a7bc2a"),
+        "PID" : "P001",
+        "PDESC" : "DELL MOUSE",
+        "PRICE" : 300,
+        "TSTK" : 55,
+        "BSTK" : 48,
+        "PBY" : [
+                {
+                        "CID" : "C001",
+                        "CNAME" : "KUMARASEN",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C009",
+                        "CNAME" : "GAURAV",
+                        "PDATE" : "13/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b48e1ac66ed471a7bc2b"),
+        "PID" : "P002",
+        "PDESC" : "DELL KEYBOARD",
+        "PRICE" : 550,
+        "TSTK" : 60,
+        "BSTK" : 20,
+        "PBY" : [
+                {
+                        "CID" : "C003",
+                        "CNAME" : "PREM AANAND",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b4f71ac66ed471a7bc2c"),
+        "PID" : "P003",
+        "PDESC" : "HP MOUSE PAD",
+        "PRICE" : 780,
+        "TSTK" : 45,
+        "BSTK" : 21,
+        "PBY" : [
+                {
+                        "CID" : "C004",
+                        "CNAME" : "BALADHANEESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C005",
+                        "CNAME" : "GRACE COMPUTER TECH",
+                        "PDATE" : "12/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b5a81ac66ed471a7bc2d"),
+        "PID" : "P004",
+        "PDESC" : "HP 32INCH COMPUTER SCREEN",
+        "PRICE" : 22000,
+        "TSTK" : 20,
+        "BSTK" : 11,
+        "PBY" : [
+                {
+                        "CID" : "C006",
+                        "CNAME" : "PRENEETHA GANESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C007",
+                        "CNAME" : "GEO STEPHAN",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C008",
+                        "CNAME" : "RAMKUMAR",
+                        "PDATE" : "13/JUL/24"
+                },
+                {
+                        "CID" : "C010",
+                        "CNAME" : "SAMYUKTHA",
+                        "PDATE" : "14/JUL/24"
+                }
+        ]            db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b4491ac66ed471a7bc2a")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" : -2}, $push : {"PBY" : [{"CID" : "C011", "CNAME" : "PARTHIBHAN", "PDATE" : "14/JUL/24"}, {"CID" : "C012", "CNAME" : "NANCY", "PDATE" : 15/JUL/24}]}}})}}})
+uncaught exception: ReferenceError: JUL is not defined : : [{"_id" : ObjectId("6692b4491ac66ed471a7bc2a")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {""}}})
+@(shell):1:263
+MongoDB Enterprise > db.ord.findAndModify({query : {$and : [{"_id" : ObjectId("6692b4491ac66ed471a7bc2a")}, {"BSTK" : {$gt : 0}}]}, update : {$inc : {"BSTK" : -2}, $push : {"PBY" : [{"CID" : "C011", "CNAME" : "PARTHIBHAN", "PDATE" : "14/JUL/24"}, {"CID" : "C012", "CNAME" : "NANCY", "PDATE" : "15/JUL/24"}]}}})
+{
+        "_id" : ObjectId("6692b4491ac66ed471a7bc2a"),
+        "PID" : "P001",
+        "PDESC" : "DELL MOUSE",
+        "PRICE" : 300,
+        "TSTK" : 55,
+        "BSTK" : 48,
+        "PBY" : [
+                {
+                        "CID" : "C001",
+                        "CNAME" : "KUMARASEN",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C009",
+                        "CNAME" : "GAURAV",
+                        "PDATE" : "13/JUL/24"
+                }
+        ]
+}
+MongoDB Enterprise > db.ord.find().pretty()
+{
+        "_id" : ObjectId("6692b4491ac66ed471a7bc2a"),
+        "PID" : "P001",
+        "PDESC" : "DELL MOUSE",
+        "PRICE" : 300,
+        "TSTK" : 55,
+        "BSTK" : 46,
+        "PBY" : [
+                {
+                        "CID" : "C001",
+                        "CNAME" : "KUMARASEN",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C009",
+                        "CNAME" : "GAURAV",
+                        "PDATE" : "13/JUL/24"
+                },
+                [
+                        {
+                                "CID" : "C011",
+                                "CNAME" : "PARTHIBHAN",
+                                "PDATE" : "14/JUL/24"
+                        },
+                        {
+                                "CID" : "C012",
+                                "CNAME" : "NANCY",
+                                "PDATE" : "15/JUL/24"
+                        }
+                ]
+        ]
+}
+{
+        "_id" : ObjectId("6692b48e1ac66ed471a7bc2b"),
+        "PID" : "P002",
+        "PDESC" : "DELL KEYBOARD",
+        "PRICE" : 550,
+        "TSTK" : 60,
+        "BSTK" : 20,
+        "PBY" : [
+                {
+                        "CID" : "C003",
+                        "CNAME" : "PREM AANAND",
+                        "PDATE" : "11/JUL/24"
+                },
+                {
+                        "CID" : "C002",
+                        "CNAME" : "ALLOY COMPUTERS",
+                        "PDATE" : "11/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b4f71ac66ed471a7bc2c"),
+        "PID" : "P003",
+        "PDESC" : "HP MOUSE PAD",
+        "PRICE" : 780,
+        "TSTK" : 45,
+        "BSTK" : 21,
+        "PBY" : [
+                {
+                        "CID" : "C004",
+                        "CNAME" : "BALADHANEESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C005",
+                        "CNAME" : "GRACE COMPUTER TECH",
+                        "PDATE" : "12/JUL/24"
+                }
+        ]
+}
+{
+        "_id" : ObjectId("6692b5a81ac66ed471a7bc2d"),
+        "PID" : "P004",
+        "PDESC" : "HP 32INCH COMPUTER SCREEN",
+        "PRICE" : 22000,
+        "TSTK" : 20,
+        "BSTK" : 11,
+        "PBY" : [
+                {
+                        "CID" : "C006",
+                        "CNAME" : "PRENEETHA GANESH",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C007",
+                        "CNAME" : "GEO STEPHAN",
+                        "PDATE" : "12/JUL/24"
+                },
+                {
+                        "CID" : "C008",
+                        "CNAME" : "RAMKUMAR",
+                        "PDATE" : "13/JUL/24"
+                },
+                {
+                        "CID" : "C010",
+                        "CNAME" : "SAMYUKTHA",
+                        "PDATE" : "14/JUL/24"
+                }
+        ]
+}
+MongoDB Enterprise >

@@ -1,0 +1,277 @@
+MongoDB Enterprise > show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+practice  0.000GB
+test      0.000GB
+test2     0.000GB
+MongoDB Enterprise > use practice
+switched to db practice
+MongoDB Enterprise > show collections
+mrk
+stu
+MongoDB Enterprise > db.stu.find()
+{ "_id" : ObjectId("669145d97b78141b0cbea5f0"), "rno" : 1, "name" : "abilash", "age" : 27 }
+{ "_id" : ObjectId("6691461b7b78141b0cbea5f1"), "rno" : 2, "name" : "abinesh", "age" : 26 }
+{ "_id" : ObjectId("669146257b78141b0cbea5f2"), "rno" : 3, "name" : "akash", "age" : 26 }
+{ "_id" : ObjectId("669146357b78141b0cbea5f3"), "rno" : 4, "name" : "anto raj", "age" : 26 }
+{ "_id" : ObjectId("669146437b78141b0cbea5f4"), "rno" : 5, "name" : "bala", "age" : 27 }
+{ "_id" : ObjectId("669146787b78141b0cbea5f5"), "rno" : 6, "name" : "benny", "age" : 26 }
+{ "_id" : ObjectId("669146a77b78141b0cbea5f6"), "rno" : 7, "name" : "charlie", "age" : 27 }
+{ "_id" : ObjectId("669147087b78141b0cbea5f7"), "rno" : 8, "name" : "chidambaram", "age" : 27 }
+{ "_id" : ObjectId("669147427b78141b0cbea5f8"), "rno" : 9, "name" : "deebak", "age" : "26" }
+{ "_id" : ObjectId("669147427b78141b0cbea5f9"), "rno" : 10, "name" : "eeshwaran", "age" : 26 }
+MongoDB Enterprise > db.mrk.find()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90, "grade" : "A" }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86, "grade" : "A" }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82, "grade" : "B+" }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75, "grade" : "B" }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66, "grade" : "C" }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91, "grade" : "A" }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88, "grade" : "A" }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 58, "grade" : "D" }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73, "grade" : "B" }
+{ "_id" : ObjectId("66914a427b78141b0cbea604"), "rno" : 10, "total" : 68, "grade" : "C" }
+MongoDB Enterprise > use test2
+switched to db test2
+MongoDB Enterprise > show collections
+sal
+MongoDB Enterprise > db.sal.find()
+{ "_id" : ObjectId("66914ec62736688b4f5610f3"), "EID" : 1002, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 245000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f4"), "EID" : 1004, "DEPT" : "MIS", "DESI" : "Manager", "SALARY" : 292129 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f5"), "EID" : 1005, "DEPT" : "HR", "DESI" : "Associate", "SALARY" : 397026 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f6"), "EID" : 1006, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 96500 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f7"), "EID" : 1003, "DEPT" : "ADMIN", "DESI" : "SR MANAGER", "SALARY" : 245673 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f9"), "EID" : 1001, "DEPT" : "OPS", "DESI" : "Director", "SALARY" : 480000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fa"), "EID" : 1008, "DEPT" : "OPS", "DESI" : "MANAGER", "SALARY" : 383781 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fb"), "EID" : 1009, "DEPT" : "mis", "DESI" : "associate", "SALARY" : 288767 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fc"), "EID" : 1010, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 134493 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fd"), "EID" : 1011, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 294149 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fe"), "EID" : 1012, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 314887 }
+{ "_id" : ObjectId("66914ec62736688b4f5610ff"), "EID" : 1014, "DEPT" : "MIS", "DESI" : "ASSOCIATE", "SALARY" : 75800 }
+{ "_id" : ObjectId("66914ec62736688b4f561100"), "EID" : 1013, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 223155 }
+{ "_id" : ObjectId("66914ec62736688b4f561101"), "EID" : 1015, "DEPT" : "OPS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 194335 }
+{ "_id" : ObjectId("66914ec62736688b4f561102"), "EID" : 1020, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 134915 }
+{ "_id" : ObjectId("66914ec62736688b4f561103"), "EID" : 1019, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 190460 }
+{ "_id" : ObjectId("66914ec62736688b4f561104"), "EID" : 1021, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 137567 }
+{ "_id" : ObjectId("66914ec62736688b4f561105"), "EID" : 1022, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 91280 }
+{ "_id" : ObjectId("66914ec62736688b4f561106"), "EID" : 1023, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 177095 }
+Type "it" for more
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "mis"}, {"DESI" : "ASSOCIATE"}]})
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "mis"}, {"DESI" : "MANAGER"}]})
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : "MANAGER"}]})
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : "ASSOCIATE"}]})
+{ "_id" : ObjectId("66914ec62736688b4f5610fd"), "EID" : 1011, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 294149 }
+{ "_id" : ObjectId("66914ec62736688b4f561102"), "EID" : 1020, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 134915 }
+{ "_id" : ObjectId("66914ec62736688b4f561103"), "EID" : 1019, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 190460 }
+{ "_id" : ObjectId("66914ec62736688b4f561112"), "EID" : 1035, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 61500 }
+{ "_id" : ObjectId("66914ec62736688b4f561117"), "EID" : 1059, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 81550 }
+MongoDB Enterprise > db.sal.find({$or : [{"DEPT" : "it"}, {"DEPT" : "MIS"}]})
+{ "_id" : ObjectId("66914ec62736688b4f5610f4"), "EID" : 1004, "DEPT" : "MIS", "DESI" : "Manager", "SALARY" : 292129 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fc"), "EID" : 1010, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 134493 }
+{ "_id" : ObjectId("66914ec62736688b4f5610ff"), "EID" : 1014, "DEPT" : "MIS", "DESI" : "ASSOCIATE", "SALARY" : 75800 }
+{ "_id" : ObjectId("66914ec62736688b4f561100"), "EID" : 1013, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 223155 }
+{ "_id" : ObjectId("66914ec62736688b4f561104"), "EID" : 1021, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 137567 }
+{ "_id" : ObjectId("66914ec62736688b4f561105"), "EID" : 1022, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 91280 }
+{ "_id" : ObjectId("66914ec62736688b4f56110d"), "EID" : 1030, "DEPT" : "MIS", "DESI" : "ASSOCIATE", "SALARY" : 72640 }
+MongoDB Enterprise > db.sal.find({"DEPT" : {$not : {$eq : "mis"}}})
+{ "_id" : ObjectId("66914ec62736688b4f5610f3"), "EID" : 1002, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 245000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f4"), "EID" : 1004, "DEPT" : "MIS", "DESI" : "Manager", "SALARY" : 292129 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f5"), "EID" : 1005, "DEPT" : "HR", "DESI" : "Associate", "SALARY" : 397026 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f6"), "EID" : 1006, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 96500 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f7"), "EID" : 1003, "DEPT" : "ADMIN", "DESI" : "SR MANAGER", "SALARY" : 245673 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f9"), "EID" : 1001, "DEPT" : "OPS", "DESI" : "Director", "SALARY" : 480000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fa"), "EID" : 1008, "DEPT" : "OPS", "DESI" : "MANAGER", "SALARY" : 383781 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fc"), "EID" : 1010, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 134493 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fd"), "EID" : 1011, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 294149 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fe"), "EID" : 1012, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 314887 }
+{ "_id" : ObjectId("66914ec62736688b4f5610ff"), "EID" : 1014, "DEPT" : "MIS", "DESI" : "ASSOCIATE", "SALARY" : 75800 }
+{ "_id" : ObjectId("66914ec62736688b4f561100"), "EID" : 1013, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 223155 }
+{ "_id" : ObjectId("66914ec62736688b4f561101"), "EID" : 1015, "DEPT" : "OPS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 194335 }
+{ "_id" : ObjectId("66914ec62736688b4f561102"), "EID" : 1020, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 134915 }
+{ "_id" : ObjectId("66914ec62736688b4f561103"), "EID" : 1019, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 190460 }
+{ "_id" : ObjectId("66914ec62736688b4f561104"), "EID" : 1021, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 137567 }
+{ "_id" : ObjectId("66914ec62736688b4f561105"), "EID" : 1022, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 91280 }
+{ "_id" : ObjectId("66914ec62736688b4f561106"), "EID" : 1023, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 177095 }
+{ "_id" : ObjectId("66914ec62736688b4f561107"), "EID" : 1025, "DEPT" : "IT", "DESI" : "ASSOCIATE", "SALARY" : 168185 }
+Type "it" for more
+MongoDB Enterprise > db.sal.find({$nor : [{"DEPT" : "IT"}, {"DEPT" : "mis"}]})
+{ "_id" : ObjectId("66914ec62736688b4f5610f3"), "EID" : 1002, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 245000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f4"), "EID" : 1004, "DEPT" : "MIS", "DESI" : "Manager", "SALARY" : 292129 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f5"), "EID" : 1005, "DEPT" : "HR", "DESI" : "Associate", "SALARY" : 397026 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f6"), "EID" : 1006, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 96500 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f7"), "EID" : 1003, "DEPT" : "ADMIN", "DESI" : "SR MANAGER", "SALARY" : 245673 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f9"), "EID" : 1001, "DEPT" : "OPS", "DESI" : "Director", "SALARY" : 480000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fa"), "EID" : 1008, "DEPT" : "OPS", "DESI" : "MANAGER", "SALARY" : 383781 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fc"), "EID" : 1010, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 134493 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fd"), "EID" : 1011, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 294149 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fe"), "EID" : 1012, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 314887 }
+{ "_id" : ObjectId("66914ec62736688b4f5610ff"), "EID" : 1014, "DEPT" : "MIS", "DESI" : "ASSOCIATE", "SALARY" : 75800 }
+{ "_id" : ObjectId("66914ec62736688b4f561100"), "EID" : 1013, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 223155 }
+{ "_id" : ObjectId("66914ec62736688b4f561101"), "EID" : 1015, "DEPT" : "OPS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 194335 }
+{ "_id" : ObjectId("66914ec62736688b4f561102"), "EID" : 1020, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 134915 }
+{ "_id" : ObjectId("66914ec62736688b4f561103"), "EID" : 1019, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 190460 }
+{ "_id" : ObjectId("66914ec62736688b4f561104"), "EID" : 1021, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 137567 }
+{ "_id" : ObjectId("66914ec62736688b4f561105"), "EID" : 1022, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 91280 }
+{ "_id" : ObjectId("66914ec62736688b4f561106"), "EID" : 1023, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 177095 }
+{ "_id" : ObjectId("66914ec62736688b4f561108"), "EID" : 1024, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 181550 }
+Type "it" for more
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.sal.find({"DEPT" : $eq : {"mis"}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:26
+MongoDB Enterprise > db.sal.find({"DEPT" : {$eq : {"mis"}}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:35
+MongoDB Enterprise > db.sal.find({"DEPT" : {$eq : "mis"}})
+{ "_id" : ObjectId("66914ec62736688b4f5610fb"), "EID" : 1009, "DEPT" : "mis", "DESI" : "associate", "SALARY" : 288767 }
+MongoDB Enterprise > db.sal.find({"DEPT" : {$eq : "mis"}}).pretty()
+{
+        "_id" : ObjectId("66914ec62736688b4f5610fb"),
+        "EID" : 1009,
+        "DEPT" : "mis",
+        "DESI" : "associate",
+        "SALARY" : 288767
+}
+MongoDB Enterprise > db.sal.find({"DESI" : {$ne : "ASSOCIATE"}})
+{ "_id" : ObjectId("66914ec62736688b4f5610f3"), "EID" : 1002, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 245000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f4"), "EID" : 1004, "DEPT" : "MIS", "DESI" : "Manager", "SALARY" : 292129 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f5"), "EID" : 1005, "DEPT" : "HR", "DESI" : "Associate", "SALARY" : 397026 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f6"), "EID" : 1006, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 96500 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f7"), "EID" : 1003, "DEPT" : "ADMIN", "DESI" : "SR MANAGER", "SALARY" : 245673 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f9"), "EID" : 1001, "DEPT" : "OPS", "DESI" : "Director", "SALARY" : 480000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fa"), "EID" : 1008, "DEPT" : "OPS", "DESI" : "MANAGER", "SALARY" : 383781 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fb"), "EID" : 1009, "DEPT" : "mis", "DESI" : "associate", "SALARY" : 288767 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fc"), "EID" : 1010, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 134493 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fe"), "EID" : 1012, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 314887 }
+{ "_id" : ObjectId("66914ec62736688b4f561100"), "EID" : 1013, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 223155 }
+{ "_id" : ObjectId("66914ec62736688b4f561101"), "EID" : 1015, "DEPT" : "OPS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 194335 }
+{ "_id" : ObjectId("66914ec62736688b4f561104"), "EID" : 1021, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 137567 }
+{ "_id" : ObjectId("66914ec62736688b4f561105"), "EID" : 1022, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 91280 }
+{ "_id" : ObjectId("66914ec62736688b4f56110b"), "EID" : 1029, "DEPT" : "ADMIN", "DESI" : "ASSISTANT MANAGER", "SALARY" : 69500 }
+{ "_id" : ObjectId("66914ec62736688b4f56110c"), "EID" : 1028, "DEPT" : "IT", "DESI" : "MANAGER", "SALARY" : 155701 }
+{ "_id" : ObjectId("66914ec62736688b4f561110"), "EID" : 1033, "DEPT" : "OPS", "DESI" : "SR. ASSOCIATE", "SALARY" : 177500 }
+{ "_id" : ObjectId("66914ec62736688b4f561114"), "EID" : 1037, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 77500 }
+{ "_id" : ObjectId("66914ec62736688b4f561115"), "EID" : 1038, "DEPT" : "ADMIN", "DESI" : "SR. ASSOCIATE", "SALARY" : 56000 }
+Type "it" for more
+MongoDB Enterprise > db.sal.find({"DEPT" : "HR"},{"DESI" : {$ne : "ASSOCIATE"}})
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "Expression $ne takes exactly 2 arguments. 1 were passed in.",
+        "code" : 16020,
+        "codeName" : "Location16020"
+}
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : {$ne : "ASSOCIATE"}}]})
+{ "_id" : ObjectId("66914ec62736688b4f5610f5"), "EID" : 1005, "DEPT" : "HR", "DESI" : "Associate", "SALARY" : 397026 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fe"), "EID" : 1012, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 314887 }
+{ "_id" : ObjectId("66914ec62736688b4f561114"), "EID" : 1037, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 77500 }
+MongoDB Enterprise > db.sal.find({"SALARY" : {$gt : 500000}})
+{ "_id" : ObjectId("66914ec62736688b4f561124"), "EID" : 1081, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 520000 }
+MongoDB Enterprise > db.sal.find({"SALARY" : {$gt : 500000}}).pretty()
+{
+        "_id" : ObjectId("66914ec62736688b4f561124"),
+        "EID" : 1081,
+        "DEPT" : "TEMP",
+        "DESI" : "ASSOCIATE",
+        "SALARY" : 520000
+}
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "mis"}, {"DESI" : {$eq : "HR"}, {"SALARY" : {$gte : 100000}}}]})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:63
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : {$eq : "ASSOCIATE"}, {"SALARY" : {$gte : 100000}}}]})
+uncaught exception: SyntaxError: expected property name, got '{' :
+@(shell):1:69
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "TEMP"},{"DESI" : {$eq : "ASSOCIATE"}}, {"SALARY" : {$gte : 100000}}]})
+{ "_id" : ObjectId("66914ec62736688b4f561124"), "EID" : 1081, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 520000 }
+{ "_id" : ObjectId("66914ec62736688b4f561126"), "EID" : 1085, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 185000 }
+{ "_id" : ObjectId("66914ec62736688b4f561127"), "EID" : 1086, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 113000 }
+{ "_id" : ObjectId("66914ec62736688b4f561128"), "EID" : 1079, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 125000 }
+{ "_id" : ObjectId("66914ec62736688b4f56112e"), "EID" : 1096, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 185000 }
+{ "_id" : ObjectId("66914ec62736688b4f561131"), "EID" : 1104, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 160000 }
+{ "_id" : ObjectId("66914ec62736688b4f561136"), "EID" : 1113, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 190000 }
+{ "_id" : ObjectId("66914ec62736688b4f561139"), "EID" : 1117, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 125000 }
+{ "_id" : ObjectId("66914ec62736688b4f56113a"), "EID" : 1120, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 105000 }
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : {$eq : "MANAGER"}}, {"SALARY" : {$lt : 200000}}]})
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : {$eq : "MANAGER"}}, {"SALARY" : {$lt : 200000}}]}).pretty()
+{
+        "_id" : ObjectId("66914ec62736688b4f5610f8"),
+        "EID" : 1007,
+        "DEPT" : "HR",
+        "DESI" : "MANAGER",
+        "SALARY" : 157322
+}
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : {$eq : "MANAGER"}}, {"SALARY" : {$lte : 200000}}]}).pretty()
+{
+        "_id" : ObjectId("66914ec62736688b4f5610f8"),
+        "EID" : 1007,
+        "DEPT" : "HR",
+        "DESI" : "MANAGER",
+        "SALARY" : 157322
+}
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : {$eq : "MANAGER"}}, {"SALARY" : {$lte : 300000}}]}).pretty()
+{
+        "_id" : ObjectId("66914ec62736688b4f5610f8"),
+        "EID" : 1007,
+        "DEPT" : "HR",
+        "DESI" : "MANAGER",
+        "SALARY" : 157322
+}
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : "HR"}, {"DESI" : {$eq : "MANAGER"}}, {"SALARY" : {$lte : 100000}}]}).pretty()
+MongoDB Enterprise > db.sal.find({"DEPT" : {$in : ["HR", "mis", "IT"]}})
+{ "_id" : ObjectId("66914ec62736688b4f5610f5"), "EID" : 1005, "DEPT" : "HR", "DESI" : "Associate", "SALARY" : 397026 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f8"), "EID" : 1007, "DEPT" : "HR", "DESI" : "MANAGER", "SALARY" : 157322 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fb"), "EID" : 1009, "DEPT" : "mis", "DESI" : "associate", "SALARY" : 288767 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fd"), "EID" : 1011, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 294149 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fe"), "EID" : 1012, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 314887 }
+{ "_id" : ObjectId("66914ec62736688b4f561102"), "EID" : 1020, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 134915 }
+{ "_id" : ObjectId("66914ec62736688b4f561103"), "EID" : 1019, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 190460 }
+{ "_id" : ObjectId("66914ec62736688b4f561107"), "EID" : 1025, "DEPT" : "IT", "DESI" : "ASSOCIATE", "SALARY" : 168185 }
+{ "_id" : ObjectId("66914ec62736688b4f561109"), "EID" : 1027, "DEPT" : "IT", "DESI" : "ASSOCIATE", "SALARY" : 56900 }
+{ "_id" : ObjectId("66914ec62736688b4f56110a"), "EID" : 1026, "DEPT" : "IT", "DESI" : "ASSOCIATE", "SALARY" : 51500 }
+{ "_id" : ObjectId("66914ec62736688b4f56110c"), "EID" : 1028, "DEPT" : "IT", "DESI" : "MANAGER", "SALARY" : 155701 }
+{ "_id" : ObjectId("66914ec62736688b4f56110e"), "EID" : 1031, "DEPT" : "IT", "DESI" : "ASSOCIATE", "SALARY" : 75000 }
+{ "_id" : ObjectId("66914ec62736688b4f561112"), "EID" : 1035, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 61500 }
+{ "_id" : ObjectId("66914ec62736688b4f561114"), "EID" : 1037, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 77500 }
+{ "_id" : ObjectId("66914ec62736688b4f561117"), "EID" : 1059, "DEPT" : "HR", "DESI" : "ASSOCIATE", "SALARY" : 81550 }
+{ "_id" : ObjectId("66914ec62736688b4f56111d"), "EID" : 1072, "DEPT" : "IT", "DESI" : "ASSOCIATE", "SALARY" : 185600 }
+MongoDB Enterprise > db.sal.find({"DEPT" : {$nin : ["HR", "mis", "IT"]}})
+{ "_id" : ObjectId("66914ec62736688b4f5610f3"), "EID" : 1002, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 245000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f4"), "EID" : 1004, "DEPT" : "MIS", "DESI" : "Manager", "SALARY" : 292129 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f6"), "EID" : 1006, "DEPT" : "OPS", "DESI" : "VP", "SALARY" : 96500 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f7"), "EID" : 1003, "DEPT" : "ADMIN", "DESI" : "SR MANAGER", "SALARY" : 245673 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f9"), "EID" : 1001, "DEPT" : "OPS", "DESI" : "Director", "SALARY" : 480000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fa"), "EID" : 1008, "DEPT" : "OPS", "DESI" : "MANAGER", "SALARY" : 383781 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fc"), "EID" : 1010, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 134493 }
+{ "_id" : ObjectId("66914ec62736688b4f5610ff"), "EID" : 1014, "DEPT" : "MIS", "DESI" : "ASSOCIATE", "SALARY" : 75800 }
+{ "_id" : ObjectId("66914ec62736688b4f561100"), "EID" : 1013, "DEPT" : "MIS", "DESI" : "MANAGER", "SALARY" : 223155 }
+{ "_id" : ObjectId("66914ec62736688b4f561101"), "EID" : 1015, "DEPT" : "OPS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 194335 }
+{ "_id" : ObjectId("66914ec62736688b4f561104"), "EID" : 1021, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 137567 }
+{ "_id" : ObjectId("66914ec62736688b4f561105"), "EID" : 1022, "DEPT" : "MIS", "DESI" : "ASSISTANT MANAGER", "SALARY" : 91280 }
+{ "_id" : ObjectId("66914ec62736688b4f561106"), "EID" : 1023, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 177095 }
+{ "_id" : ObjectId("66914ec62736688b4f561108"), "EID" : 1024, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 181550 }
+{ "_id" : ObjectId("66914ec62736688b4f56110b"), "EID" : 1029, "DEPT" : "ADMIN", "DESI" : "ASSISTANT MANAGER", "SALARY" : 69500 }
+{ "_id" : ObjectId("66914ec62736688b4f56110d"), "EID" : 1030, "DEPT" : "MIS", "DESI" : "ASSOCIATE", "SALARY" : 72640 }
+{ "_id" : ObjectId("66914ec62736688b4f56110f"), "EID" : 1032, "DEPT" : "OPS", "DESI" : "ASSOCIATE", "SALARY" : 75000 }
+{ "_id" : ObjectId("66914ec62736688b4f561110"), "EID" : 1033, "DEPT" : "OPS", "DESI" : "SR. ASSOCIATE", "SALARY" : 177500 }
+{ "_id" : ObjectId("66914ec62736688b4f561111"), "EID" : 1034, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 57000 }
+{ "_id" : ObjectId("66914ec62736688b4f561113"), "EID" : 1036, "DEPT" : "ADMIN", "DESI" : "ASSOCIATE", "SALARY" : 51500 }
+Type "it" for more
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.sal.find({$and : [{"DEPT" : {$in : ["HR", "IT", "TEMP", "OPS"]}}, {"DESI" : {$nin : ["MANAGER"]}}, {"SALARY" : {$gte : 300000}}]})
+{ "_id" : ObjectId("66914ec62736688b4f5610f5"), "EID" : 1005, "DEPT" : "HR", "DESI" : "Associate", "SALARY" : 397026 }
+{ "_id" : ObjectId("66914ec62736688b4f5610f9"), "EID" : 1001, "DEPT" : "OPS", "DESI" : "Director", "SALARY" : 480000 }
+{ "_id" : ObjectId("66914ec62736688b4f5610fe"), "EID" : 1012, "DEPT" : "HR", "DESI" : "SR. ASSOCIATE", "SALARY" : 314887 }
+{ "_id" : ObjectId("66914ec62736688b4f561124"), "EID" : 1081, "DEPT" : "TEMP", "DESI" : "ASSOCIATE", "SALARY" : 520000 }
+MongoDB Enterprise >

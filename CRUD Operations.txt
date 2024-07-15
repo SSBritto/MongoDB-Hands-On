@@ -1,0 +1,270 @@
+MongoDB Enterprise > show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+MongoDB Enterprise > use practice
+switched to db practice
+MongoDB Enterprise > db.createCollection("stu")
+{ "ok" : 1 }
+MongoDB Enterprise > cb.createCollection("marks")
+uncaught exception: ReferenceError: cb is not defined :
+@(shell):1:1
+MongoDB Enterprise > db.createCollection("mrk")
+{ "ok" : 1 }
+MongoDB Enterprise > db.stu.insert({"rno" : 1, "name" : "abilash", "age" : 27})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insert({"rno" : 2, "name" : "abinesh", "age" : 26})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insert({"rno" : 3, "name" : "akash", "age" : 26})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insert({"rno" : 4, "name" : "anto raj", "age" : 26})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insert({"rno" : 5, "name" : "bala", "age" : 27})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insert({"rno" : 6, "name" : "benny", "age" : 26})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insert({"rno" : 7, "name" : "charlie", "age" : 27})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insert({"rno" : 8, "name" : "chidambaram", "age" : 27})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.insertMany([{"rno" : 9, "name" : "deebak", "age" : "26"}, {"rno" : 10, "name" : "eshwaran", "age" : 26}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("669147427b78141b0cbea5f8"),
+                ObjectId("669147427b78141b0cbea5f9")
+        ]
+}
+MongoDB Enterprise > db.stu.find()
+{ "_id" : ObjectId("669145d97b78141b0cbea5f0"), "rno" : 1, "name" : "abilash", "age" : 27 }
+{ "_id" : ObjectId("6691461b7b78141b0cbea5f1"), "rno" : 2, "name" : "abinesh", "age" : 26 }
+{ "_id" : ObjectId("669146257b78141b0cbea5f2"), "rno" : 3, "name" : "akash", "age" : 26 }
+{ "_id" : ObjectId("669146357b78141b0cbea5f3"), "rno" : 4, "name" : "anto raj", "age" : 26 }
+{ "_id" : ObjectId("669146437b78141b0cbea5f4"), "rno" : 5, "name" : "bala", "age" : 27 }
+{ "_id" : ObjectId("669146787b78141b0cbea5f5"), "rno" : 6, "name" : "benny", "age" : 26 }
+{ "_id" : ObjectId("669146a77b78141b0cbea5f6"), "rno" : 7, "name" : "charlie", "age" : 27 }
+{ "_id" : ObjectId("669147087b78141b0cbea5f7"), "rno" : 8, "name" : "chidambaram", "age" : 27 }
+{ "_id" : ObjectId("669147427b78141b0cbea5f8"), "rno" : 9, "name" : "deebak", "age" : "26" }
+{ "_id" : ObjectId("669147427b78141b0cbea5f9"), "rno" : 10, "name" : "eshwaran", "age" : 26 }
+MongoDB Enterprise > db.mrk.insert({"rno" : 1, "total" : 90})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 2, "total" : 86})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 3, "total" : 82})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 4, "total" : 75})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 5, "total" : 66})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 6, "total" : 91})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 7, "total" : 88})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 8, "total" : 53})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insert({"rno" : 9, "total" : 73})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.insertOne({"rno" : 10, "total" : 68})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("669147e97b78141b0cbea603")
+}
+MongoDB Enterprise > cb.mrk.find()
+uncaught exception: ReferenceError: cb is not defined :
+@(shell):1:1
+MongoDB Enterprise > db.mrk.find()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90 }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86 }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75 }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66 }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91 }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88 }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 53 }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73 }
+{ "_id" : ObjectId("669147e97b78141b0cbea603"), "rno" : 10, "total" : 68 }
+MongoDB Enterprise > db.stu.find()
+{ "_id" : ObjectId("669145d97b78141b0cbea5f0"), "rno" : 1, "name" : "abilash", "age" : 27 }
+{ "_id" : ObjectId("6691461b7b78141b0cbea5f1"), "rno" : 2, "name" : "abinesh", "age" : 26 }
+{ "_id" : ObjectId("669146257b78141b0cbea5f2"), "rno" : 3, "name" : "akash", "age" : 26 }
+{ "_id" : ObjectId("669146357b78141b0cbea5f3"), "rno" : 4, "name" : "anto raj", "age" : 26 }
+{ "_id" : ObjectId("669146437b78141b0cbea5f4"), "rno" : 5, "name" : "bala", "age" : 27 }
+{ "_id" : ObjectId("669146787b78141b0cbea5f5"), "rno" : 6, "name" : "benny", "age" : 26 }
+{ "_id" : ObjectId("669146a77b78141b0cbea5f6"), "rno" : 7, "name" : "charlie", "age" : 27 }
+{ "_id" : ObjectId("669147087b78141b0cbea5f7"), "rno" : 8, "name" : "chidambaram", "age" : 27 }
+{ "_id" : ObjectId("669147427b78141b0cbea5f8"), "rno" : 9, "name" : "deebak", "age" : "26" }
+{ "_id" : ObjectId("669147427b78141b0cbea5f9"), "rno" : 10, "name" : "eshwaran", "age" : 26 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 8}, {$set : {"total" : 58}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.find()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90 }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86 }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75 }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66 }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91 }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88 }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 58 }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73 }
+{ "_id" : ObjectId("669147e97b78141b0cbea603"), "rno" : 10, "total" : 68 }
+MongoDB Enterprise > db.mrk.find({"rno" : 3})
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+MongoDB Enterprise > db.mrk.find({"rno" : 3}).pretty()
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+MongoDB Enterprise > db.mrk.deleteOne({"rno" : 10})
+{ "acknowledged" : true, "deletedCount" : 1 }
+MongoDB Enterprise > db.mrk.find()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90 }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86 }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75 }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66 }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91 }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88 }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 58 }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73 }
+MongoDB Enterprise > db.mrk.insertOne({"rno" : "total" : 68})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:34
+MongoDB Enterprise > db.mrk.insertOne({"rno" : 10, "total" : 68})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("66914a427b78141b0cbea604")
+}
+MongoDB Enterprise > db.mrk.findOne()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90 }
+MongoDB Enterprise > db.mrk.find().pretty()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90 }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86 }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75 }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66 }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91 }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88 }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 58 }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73 }
+{ "_id" : ObjectId("66914a427b78141b0cbea604"), "rno" : 10, "total" : 68 }
+MongoDB Enterprise > db.stu.save({"rno" : 11, "name" : "franklin", "age" : 26})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.stu.find()
+{ "_id" : ObjectId("669145d97b78141b0cbea5f0"), "rno" : 1, "name" : "abilash", "age" : 27 }
+{ "_id" : ObjectId("6691461b7b78141b0cbea5f1"), "rno" : 2, "name" : "abinesh", "age" : 26 }
+{ "_id" : ObjectId("669146257b78141b0cbea5f2"), "rno" : 3, "name" : "akash", "age" : 26 }
+{ "_id" : ObjectId("669146357b78141b0cbea5f3"), "rno" : 4, "name" : "anto raj", "age" : 26 }
+{ "_id" : ObjectId("669146437b78141b0cbea5f4"), "rno" : 5, "name" : "bala", "age" : 27 }
+{ "_id" : ObjectId("669146787b78141b0cbea5f5"), "rno" : 6, "name" : "benny", "age" : 26 }
+{ "_id" : ObjectId("669146a77b78141b0cbea5f6"), "rno" : 7, "name" : "charlie", "age" : 27 }
+{ "_id" : ObjectId("669147087b78141b0cbea5f7"), "rno" : 8, "name" : "chidambaram", "age" : 27 }
+{ "_id" : ObjectId("669147427b78141b0cbea5f8"), "rno" : 9, "name" : "deebak", "age" : "26" }
+{ "_id" : ObjectId("669147427b78141b0cbea5f9"), "rno" : 10, "name" : "eshwaran", "age" : 26 }
+{ "_id" : ObjectId("66914ab37b78141b0cbea605"), "rno" : 11, "name" : "franklin", "age" : 26 }
+MongoDB Enterprise > db.mrk.save({"rno" : 11, "total" : 77})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.mrk.find()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90 }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86 }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75 }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66 }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91 }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88 }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 58 }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73 }
+{ "_id" : ObjectId("66914a427b78141b0cbea604"), "rno" : 10, "total" : 68 }
+{ "_id" : ObjectId("66914ace7b78141b0cbea606"), "rno" : 11, "total" : 77 }
+MongoDB Enterprise > db.stu.replacOne({"rno" : 10, "name" : "eeshwaran", "age" : 26})
+uncaught exception: TypeError: db.stu.replacOne is not a function :
+@(shell):1:1
+MongoDB Enterprise > db.stu.replaceOne({"rno" : 10, "name" : "eeshwaran", "age" : 26})
+uncaught exception: TypeError: can't convert undefined to object :
+DBCollection.prototype.replaceOne@src/mongo/shell/crud_api.js:477:16
+@(shell):1:1
+MongoDB Enterprise > db.stu.replaceOne({"rno" : 10},{"rno" : 10, "name" : "eeshwaran", "age" : 26})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.stu.find()
+{ "_id" : ObjectId("669145d97b78141b0cbea5f0"), "rno" : 1, "name" : "abilash", "age" : 27 }
+{ "_id" : ObjectId("6691461b7b78141b0cbea5f1"), "rno" : 2, "name" : "abinesh", "age" : 26 }
+{ "_id" : ObjectId("669146257b78141b0cbea5f2"), "rno" : 3, "name" : "akash", "age" : 26 }
+{ "_id" : ObjectId("669146357b78141b0cbea5f3"), "rno" : 4, "name" : "anto raj", "age" : 26 }
+{ "_id" : ObjectId("669146437b78141b0cbea5f4"), "rno" : 5, "name" : "bala", "age" : 27 }
+{ "_id" : ObjectId("669146787b78141b0cbea5f5"), "rno" : 6, "name" : "benny", "age" : 26 }
+{ "_id" : ObjectId("669146a77b78141b0cbea5f6"), "rno" : 7, "name" : "charlie", "age" : 27 }
+{ "_id" : ObjectId("669147087b78141b0cbea5f7"), "rno" : 8, "name" : "chidambaram", "age" : 27 }
+{ "_id" : ObjectId("669147427b78141b0cbea5f8"), "rno" : 9, "name" : "deebak", "age" : "26" }
+{ "_id" : ObjectId("669147427b78141b0cbea5f9"), "rno" : 10, "name" : "eeshwaran", "age" : 26 }
+{ "_id" : ObjectId("66914ab37b78141b0cbea605"), "rno" : 11, "name" : "franklin", "age" : 26 }
+MongoDB Enterprise > db.stu.remove({"rno" : 11})
+WriteResult({ "nRemoved" : 1 })
+MongoDB Enterprise > db.mrk.remove({"rno" : 11})
+WriteResult({ "nRemoved" : 1 })
+MongoDB Enterprise > db.stu.find()
+{ "_id" : ObjectId("669145d97b78141b0cbea5f0"), "rno" : 1, "name" : "abilash", "age" : 27 }
+{ "_id" : ObjectId("6691461b7b78141b0cbea5f1"), "rno" : 2, "name" : "abinesh", "age" : 26 }
+{ "_id" : ObjectId("669146257b78141b0cbea5f2"), "rno" : 3, "name" : "akash", "age" : 26 }
+{ "_id" : ObjectId("669146357b78141b0cbea5f3"), "rno" : 4, "name" : "anto raj", "age" : 26 }
+{ "_id" : ObjectId("669146437b78141b0cbea5f4"), "rno" : 5, "name" : "bala", "age" : 27 }
+{ "_id" : ObjectId("669146787b78141b0cbea5f5"), "rno" : 6, "name" : "benny", "age" : 26 }
+{ "_id" : ObjectId("669146a77b78141b0cbea5f6"), "rno" : 7, "name" : "charlie", "age" : 27 }
+{ "_id" : ObjectId("669147087b78141b0cbea5f7"), "rno" : 8, "name" : "chidambaram", "age" : 27 }
+{ "_id" : ObjectId("669147427b78141b0cbea5f8"), "rno" : 9, "name" : "deebak", "age" : "26" }
+{ "_id" : ObjectId("669147427b78141b0cbea5f9"), "rno" : 10, "name" : "eeshwaran", "age" : 26 }
+MongoDB Enterprise > db.mrk.find()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90 }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86 }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82 }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75 }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66 }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91 }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88 }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 58 }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73 }
+{ "_id" : ObjectId("66914a427b78141b0cbea604"), "rno" : 10, "total" : 68 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 1}, {$set : {"grade" : "A"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 2}, {$set : {"grade" : "A"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 3}, {$set : {"grade" : "B+"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 4}, {$set : {"grade" : "B"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 5}, {$set : {"grade" : "C"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 6}, {$set : {"grade" : "A"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 7}, {$set : {"grade" : "A"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 8}, {$set : {"grade" : "D"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 9}, {$set : {"grade" : "B"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.updateOne({"rno" : 10}, {$set : {"grade" : "C"}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+MongoDB Enterprise > db.mrk.find()
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90, "grade" : "A" }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86, "grade" : "A" }
+{ "_id" : ObjectId("6691479b7b78141b0cbea5fc"), "rno" : 3, "total" : 82, "grade" : "B+" }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75, "grade" : "B" }
+{ "_id" : ObjectId("669147ab7b78141b0cbea5fe"), "rno" : 5, "total" : 66, "grade" : "C" }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91, "grade" : "A" }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88, "grade" : "A" }
+{ "_id" : ObjectId("669147cd7b78141b0cbea601"), "rno" : 8, "total" : 58, "grade" : "D" }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73, "grade" : "B" }
+{ "_id" : ObjectId("66914a427b78141b0cbea604"), "rno" : 10, "total" : 68, "grade" : "C" }
+MongoDB Enterprise > db.mrk.find({$and : [{"total" : {$gt : 85}}, {"grade" : "A"}]})
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90, "grade" : "A" }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86, "grade" : "A" }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91, "grade" : "A" }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88, "grade" : "A" }
+MongoDB Enterprise > db.mrk.find({$or : [{"total" : {$gt : 85}}, {"grade" : "A"}]})
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90, "grade" : "A" }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86, "grade" : "A" }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91, "grade" : "A" }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88, "grade" : "A" }
+MongoDB Enterprise > db.mrk.find({$or : [{"total" : {$gt : 85}}, {"grade" : "B"}]})
+{ "_id" : ObjectId("6691478a7b78141b0cbea5fa"), "rno" : 1, "total" : 90, "grade" : "A" }
+{ "_id" : ObjectId("669147947b78141b0cbea5fb"), "rno" : 2, "total" : 86, "grade" : "A" }
+{ "_id" : ObjectId("669147a37b78141b0cbea5fd"), "rno" : 4, "total" : 75, "grade" : "B" }
+{ "_id" : ObjectId("669147b67b78141b0cbea5ff"), "rno" : 6, "total" : 91, "grade" : "A" }
+{ "_id" : ObjectId("669147c27b78141b0cbea600"), "rno" : 7, "total" : 88, "grade" : "A" }
+{ "_id" : ObjectId("669147da7b78141b0cbea602"), "rno" : 9, "total" : 73, "grade" : "B" }
+MongoDB Enterprise >
