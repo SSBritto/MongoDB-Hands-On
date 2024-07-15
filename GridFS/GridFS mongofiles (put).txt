@@ -1,0 +1,52 @@
+Microsoft Windows [Version 10.0.22631.3810]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongofiles put boy.jpg --db=IMG
+2024-07-15T09:18:48.824+0530    connected to: mongodb://localhost/
+2024-07-15T09:18:48.824+0530    adding gridFile: boy.jpg
+
+2024-07-15T09:18:48.881+0530    added gridFile: boy.jpg
+
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongofiles put me.jpg --db=IMG_2
+2024-07-15T09:26:39.147+0530    connected to: mongodb://localhost/
+2024-07-15T09:26:39.147+0530    adding gridFile: me.jpg
+
+2024-07-15T09:26:39.236+0530    added gridFile: me.jpg
+
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongofiles put video.mp4 --db=VF
+2024-07-15T09:32:53.345+0530    connected to: mongodb://localhost/
+2024-07-15T09:32:53.345+0530    adding gridFile: video.mp4
+
+2024-07-15T09:32:53.346+0530    error adding gridFile: error while opening local gridFile 'video.mp4' : open video.mp4: The system cannot find the file specified.
+
+2024-07-15T09:32:53.346+0530    Failed: error while opening local gridFile 'video.mp4' : open video.mp4: The system cannot find the file specified.
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongofiles put video.mov --db=VF
+2024-07-15T09:34:07.066+0530    connected to: mongodb://localhost/
+2024-07-15T09:34:07.067+0530    adding gridFile: video.mov
+
+2024-07-15T09:34:21.134+0530    added gridFile: video.mov
+
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongofiles put bgm.mp3 db=AF
+2024-07-15T09:35:46.167+0530    connected to: mongodb://localhost/
+2024-07-15T09:35:46.168+0530    adding gridFile: bgm.mp3
+
+2024-07-15T09:35:46.219+0530    added gridFile: bgm.mp3
+
+2024-07-15T09:35:46.219+0530    adding gridFile: db=AF
+
+2024-07-15T09:35:46.219+0530    error adding gridFile: error while opening local gridFile 'db=AF' : open db=AF: The system cannot find the file specified.
+
+2024-07-15T09:35:46.219+0530    Failed: error while opening local gridFile 'db=AF' : open db=AF: The system cannot find the file specified.
+
+C:\Program Files\MongoDB\Server\5.0\bin>mongofiles put bgm.mp3 --db=AF
+2024-07-15T09:36:04.377+0530    connected to: mongodb://localhost/
+2024-07-15T09:36:04.378+0530    adding gridFile: bgm.mp3
+
+2024-07-15T09:36:04.453+0530    added gridFile: bgm.mp3
+
+
+C:\Program Files\MongoDB\Server\5.0\bin>
