@@ -1,0 +1,164 @@
+MongoDB Enterprise > show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+practice  0.001GB
+test      0.000GB
+test2     0.000GB
+MongoDB Enterprise > db
+test
+MongoDB Enterprise > use practice
+switched to db practice
+MongoDB Enterprise > show collections
+acc
+author
+books
+con
+emp
+mrk
+ord
+sly
+stu
+usr
+MongoDB Enterprise > db.con.find().pretty(0
+... db.con.find().pretty()
+... cls
+...
+...
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.con.find().pretty()
+{
+        "_id" : ObjectId("66937cae939a7b16eb4e4b52"),
+        "UID" : "U1",
+        "PH" : "9936729810",
+        "MAIL" : "ROBERT@GMAIL.COM"
+}
+{
+        "_id" : ObjectId("66937d12939a7b16eb4e4b53"),
+        "UID" : "U2",
+        "PH" : "9926718940",
+        "MAIL" : "DHAYA@HOTMAIL.COM"
+}
+{
+        "_id" : ObjectId("66937d12939a7b16eb4e4b54"),
+        "UID" : "U3",
+        "PH" : "8823769690",
+        "MAIL" : "DHEE@GMAIL.COM"
+}
+{
+        "_id" : ObjectId("66937d79939a7b16eb4e4b55"),
+        "UID" : "U4",
+        "PH" : "9923561890",
+        "MAIL" : "KAUSHY@YAHOO.COM"
+}
+{
+        "_id" : ObjectId("66937d79939a7b16eb4e4b56"),
+        "UID" : "U5",
+        "PH" : "7783921655",
+        "MAIL" : "PREETHI@OUTLOOK.COM"
+}
+MongoDB Enterprise > db.sly.find().pretty()
+{
+        "_id" : ObjectId("66937f88939a7b16eb4e4b5d"),
+        "UID" : "U1",
+        "SAL" : 300000
+}
+{
+        "_id" : ObjectId("66937fab939a7b16eb4e4b5e"),
+        "UID" : "U2",
+        "SAL" : 450000
+}
+{
+        "_id" : ObjectId("66937fe3939a7b16eb4e4b5f"),
+        "UID" : "U3",
+        "SAL" : 345000
+}
+{
+        "_id" : ObjectId("66937fe3939a7b16eb4e4b60"),
+        "UID" : "U4",
+        "SAL" : 500000
+}
+{
+        "_id" : ObjectId("66937fe3939a7b16eb4e4b61"),
+        "UID" : "U5",
+        "SAL" : 500000
+}
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.con.aggregate({$lookup : {from : "sly", localField : "UID", foreignField : "UID", as : "SAL DETAILS"}})
+{ "_id" : ObjectId("66937cae939a7b16eb4e4b52"), "UID" : "U1", "PH" : "9936729810", "MAIL" : "ROBERT@GMAIL.COM", "SAL DETAILS" : [ { "_id" : ObjectId("66937f88939a7b16eb4e4b5d"), "UID" : "U1", "SAL" : 300000 } ] }
+{ "_id" : ObjectId("66937d12939a7b16eb4e4b53"), "UID" : "U2", "PH" : "9926718940", "MAIL" : "DHAYA@HOTMAIL.COM", "SAL DETAILS" : [ { "_id" : ObjectId("66937fab939a7b16eb4e4b5e"), "UID" : "U2", "SAL" : 450000 } ] }
+{ "_id" : ObjectId("66937d12939a7b16eb4e4b54"), "UID" : "U3", "PH" : "8823769690", "MAIL" : "DHEE@GMAIL.COM", "SAL DETAILS" : [ { "_id" : ObjectId("66937fe3939a7b16eb4e4b5f"), "UID" : "U3", "SAL" : 345000 } ] }
+{ "_id" : ObjectId("66937d79939a7b16eb4e4b55"), "UID" : "U4", "PH" : "9923561890", "MAIL" : "KAUSHY@YAHOO.COM", "SAL DETAILS" : [ { "_id" : ObjectId("66937fe3939a7b16eb4e4b60"), "UID" : "U4", "SAL" : 500000 } ] }
+{ "_id" : ObjectId("66937d79939a7b16eb4e4b56"), "UID" : "U5", "PH" : "7783921655", "MAIL" : "PREETHI@OUTLOOK.COM", "SAL DETAILS" : [ { "_id" : ObjectId("66937fe3939a7b16eb4e4b61"), "UID" : "U5", "SAL" : 500000 } ] }
+MongoDB Enterprise > db.con.aggregate({$lookup : {from : "sly", localField : "UID", foreignField : "UID", as : "SAL DETAILS"}}).pretty()
+{
+        "_id" : ObjectId("66937cae939a7b16eb4e4b52"),
+        "UID" : "U1",
+        "PH" : "9936729810",
+        "MAIL" : "ROBERT@GMAIL.COM",
+        "SAL DETAILS" : [
+                {
+                        "_id" : ObjectId("66937f88939a7b16eb4e4b5d"),
+                        "UID" : "U1",
+                        "SAL" : 300000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("66937d12939a7b16eb4e4b53"),
+        "UID" : "U2",
+        "PH" : "9926718940",
+        "MAIL" : "DHAYA@HOTMAIL.COM",
+        "SAL DETAILS" : [
+                {
+                        "_id" : ObjectId("66937fab939a7b16eb4e4b5e"),
+                        "UID" : "U2",
+                        "SAL" : 450000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("66937d12939a7b16eb4e4b54"),
+        "UID" : "U3",
+        "PH" : "8823769690",
+        "MAIL" : "DHEE@GMAIL.COM",
+        "SAL DETAILS" : [
+                {
+                        "_id" : ObjectId("66937fe3939a7b16eb4e4b5f"),
+                        "UID" : "U3",
+                        "SAL" : 345000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("66937d79939a7b16eb4e4b55"),
+        "UID" : "U4",
+        "PH" : "9923561890",
+        "MAIL" : "KAUSHY@YAHOO.COM",
+        "SAL DETAILS" : [
+                {
+                        "_id" : ObjectId("66937fe3939a7b16eb4e4b60"),
+                        "UID" : "U4",
+                        "SAL" : 500000
+                }
+        ]
+}
+{
+        "_id" : ObjectId("66937d79939a7b16eb4e4b56"),
+        "UID" : "U5",
+        "PH" : "7783921655",
+        "MAIL" : "PREETHI@OUTLOOK.COM",
+        "SAL DETAILS" : [
+                {
+                        "_id" : ObjectId("66937fe3939a7b16eb4e4b61"),
+                        "UID" : "U5",
+                        "SAL" : 500000
+                }
+        ]
+}
+MongoDB Enterprise >

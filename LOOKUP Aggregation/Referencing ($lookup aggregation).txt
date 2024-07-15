@@ -1,0 +1,339 @@
+MongoDB Enterprise > show dbs
+admin     0.000GB
+config    0.000GB
+local     0.000GB
+practice  0.001GB
+test      0.000GB
+test2     0.000GB
+MongoDB Enterprise > use practice
+switched to db practice
+MongoDB Enterprise > show collectios
+uncaught exception: Error: don't know how to show [collectios] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+MongoDB Enterprise > show collections
+acc
+author
+books
+con
+emp
+mrk
+ord
+sly
+stu
+usr
+MongoDB Enterprise > db.author.drop()
+true
+MongoDB Enterprise > db.books.drop()
+true
+MongoDB Enterprise > show collections
+acc
+con
+emp
+mrk
+ord
+sly
+stu
+usr
+MongoDB Enterprise > db.createCollection("author")
+{ "ok" : 1 }
+MongoDB Enterprise > db.createCollection("books")
+{ "ok" : 1 }
+MongoDB Enterprise > show collections
+acc
+author
+books
+con
+emp
+mrk
+ord
+sly
+stu
+usr
+MongoDB Enterprise > db.author.insert({"_id" : "A1", "NAME" : "ROBERT", "CITY" : "CHENNAI"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.author.insert({"_id" : "A2", "NAME" : "THAMIZHSELVI", "CITY" : "CHENNAI"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.author.insertMany([{"_id" : "A3", "NAME" : "GAURAV", "CITY" : "MUMBAI"}])
+{ "acknowledged" : true, "insertedIds" : [ "A3" ] }
+MongoDB Enterprise > db.author.insertMany([{"_id" : "A4", "NAME" : "CHITHRA", "CITY" : "COIMBATORE"}, {"_id" : "A5", "NAME" : "ARUL", "CITY" : "CHENNAI"}])
+{ "acknowledged" : true, "insertedIds" : [ "A4", "A5" ] }
+MongoDB Enterprise > db.author.find()
+{ "_id" : "A1", "NAME" : "ROBERT", "CITY" : "CHENNAI" }
+{ "_id" : "A2", "NAME" : "THAMIZHSELVI", "CITY" : "CHENNAI" }
+{ "_id" : "A3", "NAME" : "GAURAV", "CITY" : "MUMBAI" }
+{ "_id" : "A4", "NAME" : "CHITHRA", "CITY" : "COIMBATORE" }
+{ "_id" : "A5", "NAME" : "ARUL", "CITY" : "CHENNAI" }
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.books.insert({"BID" : "B001", "TITLE" : "SQL BASICS", "BY" : "A1"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.books.insert({"BID" : "B002", "TITLE" : "MONGODB BASICS", "BY" : "A2"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.books.insert({"BID" : "B003", "TITLE" : "TABLEAU PUBLIC FOR BEGINNERS", "BY" : "A3"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.books.insert({"BID" : "B004", "TITLE" : "MS POWER BI", "BY" : "A4"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.books.insertMany([{"BID" : "B006", "TITLE" : "MARIA DB", "BY" : "A1"}, {"BID" : "B007", "TITLE" : "PYTHON BASIC", "BY" : "A1"}, {"BID" : "B008", "TITLE" : "MYSQL DATABASE COMPLETE COURSE", "BY" : "A1"}])ARIA DB", "BY" : "A1"}, {"BID" : "B007", "TITLE" : "PYTHON BASIC", "BY" : "A1"}, {}])
+{ongoDB Enterprise > db.books.insertMany([{"BID" : "B006", "TITLE" : "MARIA DB", "BY" : "A1"}, {"BID" : "B007", "TITLE" : "PYTHON BASIC", "BY" : "A1"}, {}])
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66940ad3aaecb0e391f3fd10"),
+                ObjectId("66940ad3aaecb0e391f3fd11"),
+                ObjectId("66940ad3aaecb0e391f3fd12")
+        ]
+}
+MongoDB Enterprise > db.books.insert({"BID" : "B009", "TITLE" : "BASICS IN C & C++", "BY" : "A2"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.books.insert({"BID" : "B010", "TITLE" : "JAVA FULL COURSE", "BY" : {"A3", "A4"}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:75
+MongoDB Enterprise > db.books.insert({"BID" : "B010", "TITLE" : "JAVA FULL COURSE", "BY" : "A3"})
+WriteResult({ "nInserted" : 1 })
+MongoDB Enterprise > db.books.insertMany([{"BID" : "B011", "TITLE" : "NODE JS", "BY" : "A4"}, {"BID" : "B012", "TITLE" : "REACT", "BY" : "A4"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66940bbbaaecb0e391f3fd15"),
+                ObjectId("66940bbbaaecb0e391f3fd16")
+        ]            db.books.insertMany([{"BID" : "B013", "TITLE" : "CSS & HTML FOR BEGINNERS", "BY" : "A5"}, {"BID" : "B014", "TITLE" : "DATA ANALYTICS &AI", "BY" : "A5"}, {"BID" : "B015", "TITLE" : "CHATGPT COMPLETE", "BY" : "A5"}]) FOR BEGINNERS", "BY" : "A5"}, {"BID" : "B014", "TITLE" : "", "BY" : "A5"}])
+{    DB Enterprise > db.books.insertMany([{"BID" : "B013", "TITLE" : "CSS & HTML FOR BEGI", "BY" : "A5"}, {"BID" : "B014", "TITLE" : "REACT", "BY" : "A5"}])
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("66940c0eaaecb0e391f3fd17"),
+                ObjectId("66940c0eaaecb0e391f3fd18"),
+                ObjectId("66940c0eaaecb0e391f3fd19")
+        ]
+}
+MongoDB Enterprise > db.author.find().pretty()
+{ "_id" : "A1", "NAME" : "ROBERT", "CITY" : "CHENNAI" }
+{ "_id" : "A2", "NAME" : "THAMIZHSELVI", "CITY" : "CHENNAI" }
+{ "_id" : "A3", "NAME" : "GAURAV", "CITY" : "MUMBAI" }
+{ "_id" : "A4", "NAME" : "CHITHRA", "CITY" : "COIMBATORE" }
+{ "_id" : "A5", "NAME" : "ARUL", "CITY" : "CHENNAI" }
+MongoDB Enterprise > db.books.find().pretty()
+{
+        "_id" : ObjectId("669409f7aaecb0e391f3fd0b"),
+        "BID" : "B001",
+        "TITLE" : "SQL BASICS",
+        "BY" : "A1"
+}
+{
+        "_id" : ObjectId("66940a07aaecb0e391f3fd0c"),
+        "BID" : "B002",
+        "TITLE" : "MONGODB BASICS",
+        "BY" : "A2"
+}
+{
+        "_id" : ObjectId("66940a31aaecb0e391f3fd0d"),
+        "BID" : "B003",
+        "TITLE" : "TABLEAU PUBLIC FOR BEGINNERS",
+        "BY" : "A3"
+}
+{
+        "_id" : ObjectId("66940a53aaecb0e391f3fd0e"),
+        "BID" : "B004",
+        "TITLE" : "MS POWER BI",
+        "BY" : "A4"
+}
+{
+        "_id" : ObjectId("66940a66aaecb0e391f3fd0f"),
+        "BID" : "B005",
+        "TITLE" : "MICROSOFT OFFICE 365",
+        "BY" : "A5"
+}
+{
+        "_id" : ObjectId("66940ad3aaecb0e391f3fd10"),
+        "BID" : "B006",
+        "TITLE" : "MARIA DB",
+        "BY" : "A1"
+}
+{
+        "_id" : ObjectId("66940ad3aaecb0e391f3fd11"),
+        "BID" : "B007",
+        "TITLE" : "PYTHON BASIC",
+        "BY" : "A1"
+}
+{
+        "_id" : ObjectId("66940ad3aaecb0e391f3fd12"),
+        "BID" : "B008",
+        "TITLE" : "MYSQL DATABASE COMPLETE COURSE",
+        "BY" : "A1"
+}
+{
+        "_id" : ObjectId("66940b04aaecb0e391f3fd13"),
+        "BID" : "B009",
+        "TITLE" : "BASICS IN C & C++",
+        "BY" : "A2"
+}
+{
+        "_id" : ObjectId("66940b52aaecb0e391f3fd14"),
+        "BID" : "B010",
+        "TITLE" : "JAVA FULL COURSE",
+        "BY" : "A3"
+}
+{
+        "_id" : ObjectId("66940bbbaaecb0e391f3fd15"),
+        "BID" : "B011",
+        "TITLE" : "NODE JS",
+        "BY" : "A4"
+}
+{
+        "_id" : ObjectId("66940bbbaaecb0e391f3fd16"),
+        "BID" : "B012",
+        "TITLE" : "REACT",
+        "BY" : "A4"
+}
+{
+        "_id" : ObjectId("66940c0eaaecb0e391f3fd17"),
+        "BID" : "B013",
+        "TITLE" : "CSS & HTML FOR BEGINNERS",
+        "BY" : "A5"
+}
+{
+        "_id" : ObjectId("66940c0eaaecb0e391f3fd18"),
+        "BID" : "B014",
+        "TITLE" : "DATA ANALYTICS & AI",
+        "BY" : "A5"
+}
+{
+        "_id" : ObjectId("66940c0eaaecb0e391f3fd19"),
+        "BID" : "B015",
+        "TITLE" : "CHATGPT COMPLETE",
+        "BY" : "A5"
+}
+MongoDB Enterprise > db.author.aggregate({$lookup : {from : "books", localField : "_id", foreignField : "BY", as : "BOOKS WRITTEN"}})
+{ "_id" : "A1", "NAME" : "ROBERT", "CITY" : "CHENNAI", "BOOKS WRITTEN" : [ { "_id" : ObjectId("669409f7aaecb0e391f3fd0b"), "BID" : "B001", "TITLE" : "SQL BASICS", "BY" : "A1" }, { "_id" : ObjectId("66940ad3aaecb0e391f3fd10"), "BID" : "B006", "TITLE" : "MARIA DB", "BY" : "A1" }, { "_id" : ObjectId("66940ad3aaecb0e391f3fd11"), "BID" : "B007", "TITLE" : "PYTHON BASIC", "BY" : "A1" }, { "_id" : ObjectId("66940ad3aaecb0e391f3fd12"), "BID" : "B008", "TITLE" : "MYSQL DATABASE COMPLETE COURSE", "BY" : "A1" } ] }
+{ "_id" : "A2", "NAME" : "THAMIZHSELVI", "CITY" : "CHENNAI", "BOOKS WRITTEN" : [ { "_id" : ObjectId("66940a07aaecb0e391f3fd0c"), "BID" : "B002", "TITLE" : "MONGODB BASICS", "BY" : "A2" }, { "_id" : ObjectId("66940b04aaecb0e391f3fd13"), "BID" : "B009", "TITLE" : "BASICS IN C & C++", "BY" : "A2" } ] }
+{ "_id" : "A3", "NAME" : "GAURAV", "CITY" : "MUMBAI", "BOOKS WRITTEN" : [ { "_id" : ObjectId("66940a31aaecb0e391f3fd0d"), "BID" : "B003", "TITLE" : "TABLEAU PUBLIC FOR BEGINNERS", "BY" : "A3" }, { "_id" : ObjectId("66940b52aaecb0e391f3fd14"), "BID" : "B010", "TITLE" : "JAVA FULL COURSE", "BY" : "A3" } ] }
+{ "_id" : "A4", "NAME" : "CHITHRA", "CITY" : "COIMBATORE", "BOOKS WRITTEN" : [ { "_id" : ObjectId("66940a53aaecb0e391f3fd0e"), "BID" : "B004", "TITLE" : "MS POWER BI", "BY" : "A4" }, { "_id" : ObjectId("66940bbbaaecb0e391f3fd15"), "BID" : "B011", "TITLE" : "NODE JS", "BY" : "A4" }, { "_id" : ObjectId("66940bbbaaecb0e391f3fd16"), "BID" : "B012", "TITLE" : "REACT", "BY" : "A4" } ] }
+{ "_id" : "A5", "NAME" : "ARUL", "CITY" : "CHENNAI", "BOOKS WRITTEN" : [ { "_id" : ObjectId("66940a66aaecb0e391f3fd0f"), "BID" : "B005", "TITLE" : "MICROSOFT OFFICE 365", "BY" : "A5" }, { "_id" : ObjectId("66940c0eaaecb0e391f3fd17"), "BID" : "B013", "TITLE" : "CSS & HTML FOR BEGINNERS", "BY" : "A5" }, { "_id" : ObjectId("66940c0eaaecb0e391f3fd18"), "BID" : "B014", "TITLE" : "DATA ANALYTICS & AI", "BY" : "A5" }, { "_id" : ObjectId("66940c0eaaecb0e391f3fd19"), "BID" : "B015", "TITLE" : "CHATGPT COMPLETE", "BY" : "A5" } ] }
+MongoDB Enterprise > db.author.aggregate({$lookup : {from : "books", localField : "_id", foreignField : "BY", as : "BOOKS WRITTEN"}}).pretty()
+{
+        "_id" : "A1",
+        "NAME" : "ROBERT",
+        "CITY" : "CHENNAI",
+        "BOOKS WRITTEN" : [
+                {
+                        "_id" : ObjectId("669409f7aaecb0e391f3fd0b"),
+                        "BID" : "B001",
+                        "TITLE" : "SQL BASICS",
+                        "BY" : "A1"
+                },
+                {
+                        "_id" : ObjectId("66940ad3aaecb0e391f3fd10"),
+                        "BID" : "B006",
+                        "TITLE" : "MARIA DB",
+                        "BY" : "A1"
+                },
+                {
+                        "_id" : ObjectId("66940ad3aaecb0e391f3fd11"),
+                        "BID" : "B007",
+                        "TITLE" : "PYTHON BASIC",
+                        "BY" : "A1"
+                },
+                {
+                        "_id" : ObjectId("66940ad3aaecb0e391f3fd12"),
+                        "BID" : "B008",
+                        "TITLE" : "MYSQL DATABASE COMPLETE COURSE",
+                        "BY" : "A1"
+                }
+        ]
+}
+{
+        "_id" : "A2",
+        "NAME" : "THAMIZHSELVI",
+        "CITY" : "CHENNAI",
+        "BOOKS WRITTEN" : [
+                {
+                        "_id" : ObjectId("66940a07aaecb0e391f3fd0c"),
+                        "BID" : "B002",
+                        "TITLE" : "MONGODB BASICS",
+                        "BY" : "A2"
+                },
+                {
+                        "_id" : ObjectId("66940b04aaecb0e391f3fd13"),
+                        "BID" : "B009",
+                        "TITLE" : "BASICS IN C & C++",
+                        "BY" : "A2"
+                }
+        ]
+}
+{
+        "_id" : "A3",
+        "NAME" : "GAURAV",
+        "CITY" : "MUMBAI",
+        "BOOKS WRITTEN" : [
+                {
+                        "_id" : ObjectId("66940a31aaecb0e391f3fd0d"),
+                        "BID" : "B003",
+                        "TITLE" : "TABLEAU PUBLIC FOR BEGINNERS",
+                        "BY" : "A3"
+                },
+                {
+                        "_id" : ObjectId("66940b52aaecb0e391f3fd14"),
+                        "BID" : "B010",
+                        "TITLE" : "JAVA FULL COURSE",
+                        "BY" : "A3"
+                }
+        ]
+}
+{
+        "_id" : "A4",
+        "NAME" : "CHITHRA",
+        "CITY" : "COIMBATORE",
+        "BOOKS WRITTEN" : [
+                {
+                        "_id" : ObjectId("66940a53aaecb0e391f3fd0e"),
+                        "BID" : "B004",
+                        "TITLE" : "MS POWER BI",
+                        "BY" : "A4"
+                },
+                {
+                        "_id" : ObjectId("66940bbbaaecb0e391f3fd15"),
+                        "BID" : "B011",
+                        "TITLE" : "NODE JS",
+                        "BY" : "A4"
+                },
+                {
+                        "_id" : ObjectId("66940bbbaaecb0e391f3fd16"),
+                        "BID" : "B012",
+                        "TITLE" : "REACT",
+                        "BY" : "A4"
+                }
+        ]
+}
+{
+        "_id" : "A5",
+        "NAME" : "ARUL",
+        "CITY" : "CHENNAI",
+        "BOOKS WRITTEN" : [
+                {
+                        "_id" : ObjectId("66940a66aaecb0e391f3fd0f"),
+                        "BID" : "B005",
+                        "TITLE" : "MICROSOFT OFFICE 365",
+                        "BY" : "A5"
+                },
+                {
+                        "_id" : ObjectId("66940c0eaaecb0e391f3fd17"),
+                        "BID" : "B013",
+                        "TITLE" : "CSS & HTML FOR BEGINNERS",
+                        "BY" : "A5"
+                },
+                {
+                        "_id" : ObjectId("66940c0eaaecb0e391f3fd18"),
+                        "BID" : "B014",
+                        "TITLE" : "DATA ANALYTICS & AI",
+                        "BY" : "A5"
+                },
+                {
+                        "_id" : ObjectId("66940c0eaaecb0e391f3fd19"),
+                        "BID" : "B015",
+                        "TITLE" : "CHATGPT COMPLETE",
+                        "BY" : "A5"
+                }
+        ]
+}
+MongoDB Enterprise >
